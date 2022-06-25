@@ -26,9 +26,10 @@ class Comment(models.Model):
     """Comments model"""
     post = models.ForeignKey(Post, related_name="comments",
                              on_delete=models.CASCADE)
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=100)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '%s - %s' % (self.post.title, self.name)
+        # return '%s - %s' % (self.post.title, self.name)
+        return f"Comment {self.body} by {self.name}"

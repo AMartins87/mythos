@@ -4,7 +4,7 @@
 {% block content %}
 
 <h1>{{post.title}}</h1><br />
-<h6>{{post.author.first_name}}</h6><br />
+<h6>{{post.author }} {{ post.date_added}}</h6><br />
 <p>{{post.body|safe }}</p>
 <br><br />
 <hr>
@@ -28,19 +28,21 @@
 </form>
 {% endif %}
 
-<b>{{total_likes}} likes </b>
-<br /><br />
+<b>{{total_likes}} likes</b>
+<br />
+
 <h2>Comments:</h2>
-{% if not post.comments.all %}
-No Comments Yet..
+
+{% if not post.comments.all %} No Comments Yet
 {% else %}
 {% for comment in post.comments.all %}
-<strong>{{comment.name}}-
-    {{comment.date_added }}</strong><br />
-{{comment.body}}
+
+<strong>{{comment.name}} - {{comment.date_added }}</strong><br />{{comment.body}}
 <br />
+
 {% endfor %}
 {% endif %}
-<a href="{% url 'comment' post.pk %}">Add commnets</a>
+<br />
+<a href="{% url 'comment' post.pk %}">Add comments</a>
 <hr>
 {% endblock %}
