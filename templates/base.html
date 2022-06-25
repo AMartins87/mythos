@@ -27,18 +27,50 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stories</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Guidelines</a>
-                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Guidelines</a>
+                        <a class="dropdown-item" href="#">Contact Us</a>
+                    </div>
+
+                </li> -->
+                {% if user.is_authenticated %}
+                <div class="mx-4  dropdown">
+                    <a class=" dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
+
+                    <div class="nav-item dropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </div>
+
+                    {% else %}
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </div>
+
+
+                    {% endif %}
+
+                </div>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         More
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
-                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
-                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Guidelines</a>
                         <a class="dropdown-item" href="#">Contact Us</a>
                     </div>
 
