@@ -40,6 +40,11 @@ Wireframes were created using Balsamiq, they can be viewed [here](). *<-- insert
 
 ## BUGS
 # Fixed bugs
+After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
+
+![Bug images](assets/wireframes/Mock_up_MS2.JPG) - upload images of bugs
+
+I reverted all migrations I made till this point, using a command ./manage.py migrate blog zero, then I proceeded with python manage.py makemigrations > python manage.py migrate and all was ok then. 
 
 
 ## Unfixed bugs

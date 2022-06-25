@@ -11,7 +11,7 @@
 
         <ul>
             <!-- preview of story -->
-            <h5>{{ x.title }}</h5>{{ x.body|slice:":195"}}...<br />
+            <h5>{{ x.title }}</h5>{{ x.body|slice:":195"|safe }}...<br />
             <a href="{% url 'blog' x.pk %}">Read full story</a><br/><hr></li>
             
         </ul>
