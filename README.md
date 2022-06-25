@@ -1,4 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 [Introduction](#introduction)
 Mythos is a blog-style website where users can read about local myths and legends from all over the world. They can also add their own local stories. 
