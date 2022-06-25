@@ -18,11 +18,14 @@ class Post(models.Model):
         return reverse('home')
 
     def total_likes(self):
+        """Counts likes"""
         return self.likes.count()
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    """Comments model"""
+    post = models.ForeignKey(Post, related_name="comments",
+                             on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)

@@ -9,5 +9,38 @@
 <br><br />
 <hr>
 <br />
+{% if user.is_authenticated %}
 
+<form action="{% url 'like_post' post.pk %}" method="POST">
+    {% csrf_token %}
+
+    {% if liked %}
+    <button type="submit" , name="post_id" , value="{{post.id}}" , class="btn btn-danger btn-sm"><i
+            class="fa-solid fa-thumbs-down"></i></button>
+    {% else %}
+    <button type="submit" , name="post_id" , value="{{post.id}}" , class="btn btn-primary btn-sm"><i
+            class="fa-solid fa-thumbs-up"></i></button>
+
+    {% endif %}
+    {% else %}
+    <a href="{% url 'login' %}" class="btn btn-primary btn-sm">like</a>
+
+</form>
+{% endif %}
+
+<b>{{total_likes}} likes </b>
+<br /><br />
+<h2>Comments:</h2>
+{% if not post.comments.all %}
+No Comments Yet..
+{% else %}
+{% for comment in post.comments.all %}
+<strong>{{comment.name}}-
+    {{comment.date_added }}</strong><br />
+{{comment.body}}
+<br />
+{% endfor %}
+{% endif %}
+<a href="{% url 'comment' post.pk %}">Add commnets</a>
+<hr>
 {% endblock %}
