@@ -2,10 +2,27 @@ body {
     padding: 20px;
 }
 
+h1.m-auto {
+    padding-top: 20px;
+    height: 80px;
+    width: 600px;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 15px;
+    font-family: 'Indie Flower', cursive;
 }
+
+.navbar-brand {
+    padding-left: 1rem;
+    font-size: 2.25rem;
+}
+
+a.navbar-brand {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+

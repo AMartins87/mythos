@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
@@ -47,13 +48,14 @@ class AddCommentView(CreateView):
 
     success_url = reverse_lazy('home')
 
+
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    liked=False
+    liked = False
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
         liked = False
     else:
         post.likes.add(request.user)
-        liked= True
+        liked = True
     return HttpResponseRedirect(reverse('blog', args=[str(pk)]))
