@@ -1,5 +1,6 @@
 body {
     padding: 20px;
+    font-family: monospace;
 }
 
 h1.m-auto {
@@ -22,7 +23,56 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.25rem;
 }
 
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: #9b9d9e;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: lightgrey;
+}
+
 a.navbar-brand {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+footer p {
+    font-family: 'Indie Flower', cursive;
+}
+
+footer a {
+    color: black;
+    font-size: x-large;
+    padding-right: 8px;
+}
+
+footer a:hover {
+    color: #ee0f65;
+}
+
+/* Index(home) page */
+ol, ul {
+    padding: 0.3rem;
+}
+
+ /* Small screens (iPhones) */
+ @media screen and (max-width: 577px) {
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
+        margin-bottom: 0rem;
+        font-weight: 400;
+        line-height: 1.0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 5px;
+        font-size: medium;
+        height: 50px;
+        width: auto;
+    }
+}
