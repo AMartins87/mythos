@@ -6,16 +6,25 @@ body {
 h1.m-auto {
     padding-top: 20px;
     height: 80px;
-    width: 600px;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 15px;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .navbar-brand {
@@ -23,13 +32,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.25rem;
 }
 
+.sticky-top {
+    position: relative;
+    top: 0;
+    width: 100%;
+}
 
 .nav-link {
     padding: 0.5rem 1rem;
     color: #9b9d9e;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
     color: lightgrey;
 }
 
@@ -37,8 +52,10 @@ a.navbar-brand {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+/* Footer */
+
 footer p {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 footer a {
@@ -56,13 +73,42 @@ footer a:hover {
     color: #ee0f65;
 }
 
+/* Background home page image */
+.hero-image {
+    background: no-repeat center center fixed;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    color: white;
+    border: 3px solid 00003f;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.btn-light {
+    margin-bottom: 15px;
+}
+
 /* Index(home) page */
-ol, ul {
+ol,
+ul {
     padding: 0.3rem;
 }
 
- /* Small screens (iPhones) */
- @media screen and (max-width: 577px) {
+/* Small screens (iPhones) */
+@media screen and (max-width: 577px) {
 
     /* body {
         font-size: 0.8rem;

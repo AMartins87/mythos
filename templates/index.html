@@ -3,21 +3,41 @@
 
 
 {% block content %}
+<div class="container-fluid hero-image"
+    style="background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656258705/naja-bertolt-jensen-GtTNR-nxbK4-unsplash_exwkkw.jpg') ;">
+    <div class="hero-text">
+        <h1 class="text-center page-title">Welcome to Mythos</h1>
 
-<h1 class="m-auto" style="height: 80px; width: 600px;">Latest Stories</h1>
-<div class="mx-auto mt-11" style="width: auto;">
-    <ol>
-        {% for x in object_list %}
+        <p class="text-center">You can find here myths, legends and folklore stories from all over the world.</p>
+        
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">
+            <button class="btn btn-light btn-login-register">Logout</button>
+        </a>
 
-        <ul>
-            <!-- preview of story -->
-            <h5>{{ x.title }}</h5>{{ x.body|slice:":195"|safe }}...<br />
-            <a href="{% url 'blog' x.pk %}">Read full story</a><br/><hr></li>
-            
-        </ul>
+        {% else %}
+        <a href="{% url 'login' %}"
+             class="btn btn-light btn-login-register">Login/Register
+        </a>
+        {% endif %}
+    </div>
+    <h2 class="m-auto text-center">Latest Stories</h2>
+    <div class="mx-auto mt-11 text-center" style="width: auto;">
+        <ol>
+            {% for x in object_list %}
 
-        {% endfor %}
-    </ol>
+            <ul>
+                <!-- preview of story -->
+                <h5>{{ x.title }}</h5>{{ x.body|slice:":195"|safe }}...<br />
+                <a href="{% url 'blog' x.pk %}">Read full story</a><br />
+                <hr>
+                </li>
+
+            </ul>
+
+            {% endfor %}
+        </ol>
+    </div>
 </div>
 
 

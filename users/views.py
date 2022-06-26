@@ -5,7 +5,6 @@ from django.urls import reverse_lazy
 from .forms import SignUpForm
 
 
-# Create your views here.
 class UserRegisterView(generic.CreateView):
     form_class = SignUpForm
     template_name = 'registration/register.html'

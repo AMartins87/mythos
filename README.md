@@ -54,3 +54,11 @@ I reverted all migrations I made till this point, using a command ./manage.py mi
 
 
 ## CREDITS
+Images
+https://unsplash.com/photos/GtTNR-nxbK4 - mermaid by Naja Bertolt Jensen, Unsplash
+
+https://www.pexels.com/photo/low-angle-view-on-person-wearing-costume-of-ancient-god-9969537/ - Person with facemask by Amar Preciado, Pexels
+
+https://www.pexels.com/photo/the-trojan-horse-6474435/ - Trojan horse by KEMAL HAYIT, Pexels
+
+

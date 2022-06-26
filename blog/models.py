@@ -9,7 +9,8 @@ class Post(models.Model):
     title_tag = models.CharField(max_length=250, default="blog")
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     body = RichTextField(blank=True, null=True)
-    likes = models.ManyToManyField(User, related_name="blog_post")
+    likes = models.ManyToManyField(User, related_name="blog_post", blank=True)
+    
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
