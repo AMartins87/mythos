@@ -32,7 +32,7 @@
                     </li>
 
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Stories</a>
+                        <a class="nav-link" href="#">Stories</a>
                     </li>
 
                     {% if user.is_authenticated %}
@@ -57,9 +57,9 @@
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                     {% endif %}
-
+                </ul>
             </div>
-            </ul>
+
             <ul class="nav justify-content-end navbar-nav ">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
@@ -74,13 +74,14 @@
     </nav>
 
     {% block content %}
+    <!-- Content of each site-->
     <div class="container-fluid"></div>
     {% endblock %}
 
     <!-- Fontawesome script below -->
     <script src="https://kit.fontawesome.com/88e47303d2.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -92,17 +93,20 @@
         crossorigin="anonymous"></script>
 
     <!-- Footer -->
-    <footer class="footer mt-auto">
-        <div class="card-body">
-            <p class="m-0 text-center text-black">Copyright © 2022</p>
-            <p class="m-0 text-center text-black">
-                <a href="https://youtube.com" rel="noreferrer" target="_blank"
-                    aria-label="Visit our YouTube channel (opens in a new tab)"><i class="fab fa-youtube"></i></a>
-                <a href="https://twitter.com" rel="noreferrer" target="_blank"
-                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com" rel="noreferrer" target="_blank"
-                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
-        </div>
+    <footer class="footer dark-bg mt-auto py-3">
+        <!-- Copyright info -->
+        <p class="text-center m-0 py-2">Copyright © 2022</p>
+        <p class="text-center m-0">
+            <!-- Social media links -->
+            <a href ="https://youtube.com" rel="noreferrer" target="_blank" class="social"
+                aria-label="Visit our YouTube channel (opens in a new tab)"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" rel="noreferrer" target="_blank" class="social"
+                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" rel="noreferrer" target="_blank" class="social"
+                aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
+        </p>
+
+
     </footer>
 </body>
 

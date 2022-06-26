@@ -9,36 +9,36 @@
         <h1 class="text-center page-title">Welcome to Mythos</h1>
 
         <p class="text-center">You can find here myths, legends and folklore stories from all over the world.</p>
-        
+
         {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">
             <button class="btn btn-light btn-login-register">Logout</button>
         </a>
 
         {% else %}
-        <a href="{% url 'login' %}"
-             class="btn btn-light btn-login-register">Login/Register
+        <a href="{% url 'login' %}" class="btn btn-light btn-login-register">Login/Register
         </a>
         {% endif %}
     </div>
-    <h2 class="m-auto text-center">Latest Stories</h2>
-    <div class="mx-auto mt-11 text-center" style="width: auto;">
-        <ol>
-            {% for x in object_list %}
+    <div class="latest-stories text center">
+        <h2 class="m-auto text-center">Latest Stories</h2>
+        <div class="mx-auto mt-11 text-center" style="width: auto;">
+            <ol>
+                {% for x in object_list %}
 
-            <ul>
-                <!-- preview of story -->
-                <h5>{{ x.title }}</h5>{{ x.body|slice:":195"|safe }}...<br />
-                <a href="{% url 'blog' x.pk %}">Read full story</a><br />
-                <hr>
-                </li>
+                <ul>
+                    <!-- preview of story -->
+                    <h5>{{ x.title }}</h5>{{ x.body|slice:":195"|safe }}...<br />
+                    <a href="{% url 'blog' x.pk %}">Read full story</a><br />
+                    <hr>
+                    </li>
 
-            </ul>
+                </ul>
 
-            {% endfor %}
-        </ol>
+                {% endfor %}
+            </ol>
+        </div>
     </div>
-</div>
 
 
-{% endblock %}
+    {% endblock %}

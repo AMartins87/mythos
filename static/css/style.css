@@ -54,8 +54,17 @@ a.navbar-brand {
 
 /* Footer */
 
-footer p {
+/* footer.m-0 {
+    display: inline-grid;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+} */
+
+.py-3 {
+    position: absolute;
     font-family: 'Gloria Hallelujah', cursive;
+    top: 100%;
 }
 
 footer a {
@@ -64,13 +73,15 @@ footer a {
     padding-right: 8px;
 }
 
-footer.m-0 {
-    display: inline-grid;
-    position: fixed;
+.social:hover {
+    color: #ee0f65;
 }
 
-footer a:hover {
-    color: #ee0f65;
+/* Index(home) page */
+
+ol,
+ul {
+    padding: 0.3rem;
 }
 
 /* Background home page image */
@@ -101,11 +112,12 @@ footer a:hover {
     margin-bottom: 15px;
 }
 
-/* Index(home) page */
-ol,
-ul {
-    padding: 0.3rem;
+/* Latest stories section */
+.latest-stories {
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
+
 
 /* Small screens (iPhones) */
 @media screen and (max-width: 577px) {
