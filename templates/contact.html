@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% block content %}
+<div class="card-body">
+
+    <h1 class="text-center my-2">Contact Us</h1>
+
+    <div class="card mb-4 mt-5 mx-3 contact-form">
+        <div class="card-body">
+
+            {% csrf_token %}
+            <!-- as_p means show form as paragraph (as_table is possibility too)-->
+            {{ form.as_p }} {% comment %} {% endcomment %}
+
+            <button class="btn btn-secondary">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

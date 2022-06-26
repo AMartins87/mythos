@@ -1,5 +1,5 @@
 body {
-    padding: 20px;
+    width: fit-content;
     font-family: monospace;
 }
 
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand {
-    padding-left: 1rem;
+    padding-left: 0.1rem;
     font-size: 2.25rem;
 }
 
@@ -47,6 +47,11 @@ footer a {
     padding-right: 8px;
 }
 
+footer.m-0 {
+    display: inline-grid;
+    position: fixed;
+}
+
 footer a:hover {
     color: #ee0f65;
 }
@@ -59,8 +64,9 @@ ol, ul {
  /* Small screens (iPhones) */
  @media screen and (max-width: 577px) {
 
-    body {
+    /* body {
         font-size: 0.8rem;
+        
     }
 
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
@@ -72,7 +78,5 @@ ol, ul {
     h1, h2, h3, h4, h5, h6 {
         margin-top: 5px;
         font-size: medium;
-        height: 50px;
-        width: auto;
-    }
+    } */
 }

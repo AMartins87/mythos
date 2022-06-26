@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
-from .forms import PostForm, CommentForm
+from .models import Post, Comment, Contact
+from .forms import PostForm, CommentForm, ContactForm
 
 
 # def home(request):
@@ -59,3 +59,9 @@ def LikeView(request, pk):
         post.likes.add(request.user)
         liked = True
     return HttpResponseRedirect(reverse('blog', args=[str(pk)]))
+
+
+class ContactView(CreateView):
+    model = Contact
+    form_class = ContactForm
+    template_name = 'contact.html'

@@ -33,3 +33,13 @@ class Comment(models.Model):
     def __str__(self):
         # return '%s - %s' % (self.post.title, self.name)
         return f"Comment {self.body} by {self.name}"
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=250)
+    message = models.TextField()
+
+    def __str__(self):
+        # this is just to preview the contact model as email on admin dashboard
+        return self.email
