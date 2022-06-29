@@ -5,13 +5,14 @@
 
 <h3 class="my-4">Add comment</h3>
 
-<div class="form-group">
+<div class="form-group" placeholder="Leave your comment here">
+
     <form method="POST">
 
         {% csrf_token %}
 
         {{ form.as_p }}
-        <button class="btn btn-secondary">Add comment</button>
+        <button class="btn btn-dark">Add comment</button>
     </form>
 </div>
 

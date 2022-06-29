@@ -100,12 +100,17 @@ ul {
     position: absolute;
     top: 25%;
     left: 50%;
+    padding: 6px;
     color: white;
     border: 3px solid 00003f;
     transform: translate(-50%, -50%);
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
+}
+
+.container-fluid {
+    width: auto;
 }
 
 .btn-light {
@@ -118,6 +123,23 @@ ul {
     margin-bottom: 30px;
 }
 
+/* Story click-through */ 
+
+.btn.btn-success {
+    background-color: #ee0f65;
+    border-color: lightpink;
+    border-radius: 20px;
+}
+
+.flex-column {
+    padding: 20px;
+}
+
+/* Make a comment */
+
+.btn-dark {
+    border-radius: 25px;
+}
 
 /* Small screens (iPhones) */
 @media screen and (max-width: 577px) {
@@ -137,4 +159,9 @@ ul {
         margin-top: 5px;
         font-size: medium;
     } */
+
+    .hero-text {
+        top: 40%;
+        border-radius: 5px;
+    }
 }

@@ -28,7 +28,8 @@ class Comment(models.Model):
                              on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     body = models.TextField()
-    date_added = models.DateTimeField(auto_now_add=True)
+    date_added = models.DateTimeField(auto_now_add=True, editable=False, blank=True, null=True)
+    
 
     def __str__(self):
         # return '%s - %s' % (self.post.title, self.name)

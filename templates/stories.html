@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<h1>{{post.title}}</h1><br />
-<h6>{{post.author }} {{ post.date_added}}</h6><br />
+<h3>{{post.title}}</h3><br />
+<h6>by {{post.author }} {{ post.date_added}}</h6><br />
 <p>{{post.body|safe }}</p>
 <br><br />
 <hr>
@@ -14,19 +14,11 @@
 <form action="{% url 'like_post' post.pk %}" method="POST">
         {% csrf_token %}
 
-        {% if liked %}
-        <button type="submit" name="post_id" value="{{post.slug}}" class="btn-like">
-                <i class="fas fa-heart"></i>
-        </button>
-        {% else %}
-        <button type="submit" , name="post_id" , value="{{post.id}}" , class="btn btn-primary btn-sm">Dislike</button>
-
-        {% endif %}
-
-        {% else %}
-        <a href="{% url 'login' %}" class="btn btn-primary btn-sm">like</a>
+        <button type="submit" , name="post_id" , value="{{post.id}}" , class="btn btn-success me-md-2 btn-sm"
+                type="button">Like</button>
 
 </form>
+
 {% endif %}
 
 <b>{{total_likes}} likes</b>
