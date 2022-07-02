@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<h1 class="my-4">Share your story</h1>
-<p>Add new myth or folklore story</p>
+<h2 class="my-4">Share your story</h2>
+<p>Add new myth, folklore story or just an urban legend</p>
 <br>
 
 <div class="form-group">
@@ -13,8 +13,9 @@
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}
-
-        <button class="btn btn-secondary">Post</button>
+        <div class="d-grid">
+            <button class="btn btn-dark btn-lg">Post</button>
+        </div>
     </form>
 </div>
 <script>
