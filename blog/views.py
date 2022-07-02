@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Contact
@@ -37,6 +37,19 @@ class AddPostView(CreateView):
     template_name = 'add_post.html'
 
 
+class UpdatePostView(UpdateView):
+    model = Post
+    template_name = 'update_post.html'
+    fields = ('title', 'title_tag', 'body')
+
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
+
+    success_url = reverse_lazy('home')
+
+
 class AddCommentView(CreateView):
     model = Comment
     form_class = CommentForm
@@ -65,3 +78,5 @@ class ContactView(CreateView):
     model = Contact
     form_class = ContactForm
     template_name = 'contact.html'
+
+    success_url = reverse_lazy('home')

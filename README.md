@@ -62,6 +62,12 @@ I reverted all migrations I made till this point, using a command ./manage.py mi
 
 
 ## CREDITS
+
+https://www.w3schools.com/ 
+https://getbootstrap.com/docs/5.0
+https://docs.djangoproject.com/en/4.0/
+https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/
+
 Images
 https://unsplash.com/photos/GtTNR-nxbK4 - mermaid by Naja Bertolt Jensen, Unsplash
 
