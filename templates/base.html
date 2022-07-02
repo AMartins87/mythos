@@ -104,6 +104,19 @@
 
 
     </footer>
+    <!-- If logged in as admin, message shows and link to admin dashboard -->
+    <div class="container">
+        {% if request.user.is_superuser %}
+        <p class="btn-info">You are logged in as admin</p>
+        <a href="/admin">
+            <h6>Dashboard</h6>
+        </a>
+        {% else %}
+        <a href="{% url 'home' %}"></a>       
+        {% endif %}
+       
+    </div>
+
 </body>
 
 </html>

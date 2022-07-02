@@ -1,8 +1,8 @@
+from datetime import datetime, date
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
-from datetime import datetime, date
 
 
 class Post(models.Model):
@@ -11,7 +11,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     body = RichTextField(blank=True, null=True)
     likes = models.ManyToManyField(User, related_name="blog_post", blank=True)
-    
+    post_date = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
@@ -31,7 +31,6 @@ class Comment(models.Model):
     name = models.CharField(max_length=100)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
-
 
     def __str__(self):
         # return '%s - %s' % (self.post.title, self.name)

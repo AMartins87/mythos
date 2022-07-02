@@ -6,8 +6,6 @@ from .models import Post, Comment, Contact
 from .forms import PostForm, CommentForm, ContactForm
 
 
-# def home(request):
-#     return render(request, 'index.html')
 class HomeView(ListView):
     model = Post
     template_name = 'index.html'

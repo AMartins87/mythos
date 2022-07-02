@@ -71,11 +71,11 @@ footer a {
     color: #ee0f65;
 }
 
-.btn:hover {
-    color: #ee0f65;
+.btn-success:hover {
+    font-weight: bold;
 }
 
-/* Index(home) page */
+/* Home page */
 
 ol,
 ul {
@@ -138,6 +138,15 @@ ul {
     padding: 20px;
 }
 
+div a {
+    color: #729cdb;
+    text-decoration: none;
+    
+}
+
+div a:hover {
+    text-decoration: underline;
+}
 /* Make a comment */
 
 .btn-dark {
@@ -166,5 +175,9 @@ ul {
     .btn.btn-login-register {
         border-radius: 1rem;
         font-size: inherit;
+    }
+
+    .btn.btn-login-register:hover{
+        background-color: #ee0f65;
     }
 }

@@ -33,9 +33,11 @@ class CommentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CommentForm, self).__init__(*args, **kwargs)
+        #  Removes the label 'body' from above the comment box
         self.fields['body'].label = ""
+
 
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = '__all__'    
+        fields = '__all__'
