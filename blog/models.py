@@ -11,7 +11,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     body = RichTextField(blank=True, null=True)
     likes = models.ManyToManyField(User, related_name="blog_post", blank=True)
-    post_date = models.DateTimeField(auto_now_add=True)
+    
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)

@@ -3,23 +3,25 @@
 
 
 {% block content %}
-<div class="container-fluid hero-image"
-    style="background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656258705/naja-bertolt-jensen-GtTNR-nxbK4-unsplash_exwkkw.jpg') ;">
+
+<div class="container-fluid hero-image mh-50"
+    style="height:332px;
+     background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656258705/naja-bertolt-jensen-GtTNR-nxbK4-unsplash_exwkkw.jpg') ;" >
     <div class="hero-text">
         <h1 class="text-center page-title">Welcome to Mythos</h1>
 
-        <p class="text-center">You can find here myths, legends and folklore stories from all over the world.</p>
-
+        <p class="text-center">You can find here myths, legends and folklore stories from all over the world.<br/>
         {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">
-            <button class="btn btn-light btn-login-register">Logout</button>
-        </a>
-
-        {% else %}
-        <a href="{% url 'login' %}" class="btn btn-light btn-login-register">Login/Register
-        </a>
-        {% endif %}
-    </div>
+            <a href="{% url 'logout' %}">
+                <button class="btn btn-light btn-login-register">Logout</button>
+            </a>
+           {% else %}
+            <a href="{% url 'login' %}" class="btn btn-light btn-login-register">Login/Register
+            </a>
+            {% endif %}</p>
+        
+    </div>  
+</div>
     <div class="latest-stories text center">
         <h2 class="m-auto text-center">Latest Stories</h2>
         <div class="mx-auto mt-11 text-center" style="width: auto;">
@@ -39,6 +41,7 @@
             </ol>
         </div>
     </div>
+
 
 
     {% endblock %}

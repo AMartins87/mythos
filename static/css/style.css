@@ -62,7 +62,7 @@ a.navbar-brand {
 } */
 
 .py-3 {
-    position: absolute;
+    position: relative;
     font-family: 'Gloria Hallelujah', cursive;
     top: 100%;
 }
@@ -110,7 +110,7 @@ ul {
 }
 
 .container-fluid {
-    width: auto;
+    width: -webkit-fill-available;
 }
 
 .btn-light {
@@ -121,6 +121,7 @@ ul {
 .latest-stories {
     margin: 0 auto;
     margin-bottom: 30px;
+    padding-top: 20px;
 }
 
 /* Story click-through */ 
