@@ -12,7 +12,7 @@ As a site user and site admin I want to be able to login/logout of my account so
 ## *As a site user:*
     - I can click on a post so I can read it in full
     - I want to be able to write comments so I can exchange opinions and ideas with other users and the blog owner (*this attracts more traffic and makes the site social*)
-    - I want to be able to like and dislike posts so I can show the users and site admin I have liked/disliked their content 
+    - I want to be able to like posts so I can show the users and site admin I have liked their content 
 
 # Site owner's goal:
 ## *As a site admin:*

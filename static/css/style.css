@@ -8,21 +8,11 @@ h1.m-auto {
     height: 80px;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 20px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 15px;
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -78,6 +68,10 @@ footer a {
 }
 
 .social:hover {
+    color: #ee0f65;
+}
+
+.btn:hover {
     color: #ee0f65;
 }
 
@@ -153,24 +147,24 @@ ul {
 /* Small screens (iPhones) */
 @media screen and (max-width: 577px) {
 
-    /* body {
-        font-size: 0.8rem;
-        
-    }
-
-    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
-        margin-bottom: 0rem;
-        font-weight: 400;
-        line-height: 1.0;
-    }
-
     h1, h2, h3, h4, h5, h6 {
-        margin-top: 5px;
-        font-size: medium;
-    } */
-
+        font-size: x-large;
+    }
+    
     .hero-text {
-        top: 40%;
-        border-radius: 5px;
+        top: 50%;
+        width: 75%;
+        border-radius: 50px;
+        font-size: medium;
+        padding: inherit;
+    }
+
+    .text-center {
+        padding-top: 5px;
+    }
+
+    .btn.btn-login-register {
+        border-radius: 1rem;
+        font-size: inherit;
     }
 }
