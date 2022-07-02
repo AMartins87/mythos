@@ -16,6 +16,18 @@
 </head>
 
 <body class="d-flex align-items-center flex-column h-100 main-bg">
+    <!-- If logged in as admin, message shows and link to admin dashboard -->
+    <div class="container">
+        {% if request.user.is_superuser %}
+        <p class="btn-info">You are logged in as admin</p>
+        <a href="/admin">
+            <h6>Admin dashboard</h6>
+        </a>
+        {% else %}
+        <a href="{% url 'home' %}"></a>       
+        {% endif %}
+       
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-expand{-sm|-md|-lg|-xl|-xxl} sticky-top nav-bg">
         <div class="container-fluid">
@@ -104,18 +116,6 @@
 
 
     </footer>
-    <!-- If logged in as admin, message shows and link to admin dashboard -->
-    <div class="container">
-        {% if request.user.is_superuser %}
-        <p class="btn-info">You are logged in as admin</p>
-        <a href="/admin">
-            <h6>Dashboard</h6>
-        </a>
-        {% else %}
-        <a href="{% url 'home' %}"></a>       
-        {% endif %}
-       
-    </div>
 
 </body>
 

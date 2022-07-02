@@ -7,13 +7,12 @@
 <h6>by {{post.author }} {{ post.date_added}}</h6><br />
 
 {% comment %} added {% endcomment %}
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
+{% if user.is_authenticated %}{% if user.id == post.author.id %} <em>{{ post.post_date }}</em>
+
 <div class="user_changes">
         <small><a class="edit" href="{% url 'update_post' post.pk %}">Edit |</a></small>
         <small><a class="delete" href="{% url 'delete_post' post.pk %}">Delete</a></small>
         <hr>
-        </li>
 </div>
 {% endif %}
 {% endif %}

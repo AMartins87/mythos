@@ -1,6 +1,6 @@
+{% extends 'base.html' %}
 {% comment %} added {% endcomment %}
 
-{% extends 'base.html' %}
 {% block title %} Update the post{% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}
-        <button class="btn btn-secondary ">Update</button>
+        <button class="btn btn-secondary">Update</button>
     </form>
 </div>
 

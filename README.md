@@ -75,4 +75,5 @@ https://www.pexels.com/photo/low-angle-view-on-person-wearing-costume-of-ancient
 
 https://www.pexels.com/photo/the-trojan-horse-6474435/ - Trojan horse by KEMAL HAYIT, Pexels
 
+https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/ - spider
 

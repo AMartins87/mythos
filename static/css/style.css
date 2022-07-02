@@ -119,6 +119,22 @@ ul {
     margin-top: 20px;
 }
 
+/* Login message if administrator */
+
+.container h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+    color: black;
+    text-align: right;
+    text-decoration: none;
+}
+
+.btn-info {
+    text-align: center;
+    color: white;
+    background-color: #ee0f65;
+}
+
 /* Latest stories section */
 .latest-stories {
     margin: 0 auto;
@@ -151,6 +167,24 @@ div a:hover {
 
 .btn-dark {
     border-radius: 25px;
+}
+
+/* Delete story */ 
+
+strong {
+    font-family: 'Gloria Hallelujah';
+    font-style: italic;
+    font-weight: lighter;
+    text-align: right;
+    text-decoration: overline;
+}
+
+.btn.btn-danger {
+    border-radius: 25px;
+}
+
+.buttons {
+    display: inline;
 }
 
 /* Small screens (iPhones) */
