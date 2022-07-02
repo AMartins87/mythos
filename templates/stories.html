@@ -4,14 +4,15 @@
 {% block content %}
 
 <h3>{{post.title}}</h3><br />
-<h6>by {{post.author }} {{ post.date_added}}</h6><br />
+<h6>by {{post.author }}</h6>
+<em>{{ post.post_date }}</em>
 
 {% comment %} added {% endcomment %}
-{% if user.is_authenticated %}{% if user.id == post.author.id %} <em>{{ post.post_date }}</em>
+{% if user.is_authenticated %}{% if user.id == post.author.id %} 
 
 <div class="user_changes">
-        <small><a class="edit" href="{% url 'update_post' post.pk %}">Edit |</a></small>
-        <small><a class="delete" href="{% url 'delete_post' post.pk %}">Delete</a></small>
+        <small><a href="{% url 'update_post' post.pk %}">Edit |</a></small>
+        <small><a href="{% url 'delete_post' post.pk %}">Delete</a></small>
         <hr>
 </div>
 {% endif %}

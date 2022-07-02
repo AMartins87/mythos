@@ -161,7 +161,7 @@ div a {
 }
 
 div a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 black;
 }
 /* Make a comment */
 
