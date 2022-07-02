@@ -1,6 +1,7 @@
 
-[Introduction](#introduction)
-Mythos is a blog-style website where users can read about local myths and legends from all over the world. They can also add their own local stories. 
+# INTRODUCTION 
+
+Mythos is full-stack framework project built using Django, Python, HTML and CSS. It's a blog-style website where users can read about local myths and legends from all over the world. The objective is for users to be allowed to post, like and comment on blog posts.
 
 
 ## USER STORIES
@@ -8,23 +9,30 @@ Mythos is a blog-style website where users can read about local myths and legend
 As a site user and site admin I want to be able to login/logout of my account so I can interact with the site’s posts and users
 
 # External user’s goal:
-# *As a site user:*
+## *As a site user:*
     - I can click on a post so I can read it in full
     - I want to be able to write comments so I can exchange opinions and ideas with other users and the blog owner (*this attracts more traffic and makes the site social*)
     - I want to be able to like and dislike posts so I can show the users and site admin I have liked/disliked their content 
 
 # Site owner's goal:
-# *As a site admin:*
+## *As a site admin:*
     - I can create/publish new posts so that I can keep the blog updated and relevant to its purpose
     - I can edit/delete posts so I can correct typos or incorrect information which I may have provided
-    - I can delete site users’ comments if they are against guidelines
+    <!-- - I can delete site users’ comments if they are against guidelines -->
 
 ## FEATURES 
 # Main Page
-    - Navbar
+    - Navbar (on every page for ease of navigation)
+        - Stories
+        - Add Story
         - Register
         - Login
-        - Community Guidelines
+        - Contact Us
+        <!-- - Community Guidelines -->
+    
+    - Footer
+        - Copyright information
+        - Social media links for YouTube, Twitter, Facebook
 
 # Colour Scheme
 
