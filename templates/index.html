@@ -28,19 +28,29 @@
     <div class="mx-auto mt-11 text-center" style="width: auto;">
         <ol>
             {% for x in object_list %}
+            <div class="col-md-auto index-card">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if post.image.url %}
+                            <img src=" {{ post.image.url }}" class="card-img-top" alt="Image uploaded by user">
+                            {% else %}
+                            <img src="https://res.cloudinary.com/mythos/image/upload/v1656258703/pexels-amar-preciado-9969537_mstn4h.jpg"
+                            class="card-img-top" alt="Placeholder image if user did not upload an image">
+                            {% endif %}
+                        </div>
+                        <ul>
+                            <!-- preview of story -->
+                            <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
+                            </br>
+                            {{ x.body|slice:":195"|safe }}...<br />
+                            <a href="{% url 'blog' x.pk %}">Read full story</a><br />
+                            <hr>
+                            </li>
 
-            <ul>
-                <!-- preview of story -->
-                <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
-                </br>
-                {{ x.body|slice:":195"|safe }}...<br />
-                <a href="{% url 'blog' x.pk %}">Read full story</a><br />
-                <hr>
-                </li>
+                        </ul>
 
-            </ul>
-
-            {% endfor %}
+                        {% endfor %}
         </ol>
     </div>
 </div>

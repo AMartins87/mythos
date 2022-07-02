@@ -142,6 +142,11 @@ ul {
     padding-top: 20px;
 }
 
+.card-img, .card-img-top {
+    height: 50vh;
+    width: auto;
+}
+
 /* Story click-through */ 
 
 .btn.btn-success {
@@ -154,6 +159,10 @@ ul {
     padding: 20px;
 }
 
+.story_body {
+    padding: 20px;
+}
+
 div a {
     color: #729cdb;
     text-decoration: none;
@@ -163,6 +172,7 @@ div a {
 div a:hover {
     text-shadow: 0 0 black;
 }
+
 /* Make a comment */
 
 .btn-dark {
@@ -213,5 +223,14 @@ strong {
 
     .btn.btn-login-register:hover{
         background-color: #ee0f65;
+    }
+
+    .story_body {
+        font-size: medium;
+    }
+    
+    .card-img, .card-img-top {
+        height: auto;
+        width: 80vw;
     }
 }

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} {{post.title_tag}} {% endblock %}
+{% block title %} {% endblock %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
 <em>{{ post.post_date }}</em>
 
 {% comment %} added {% endcomment %}
-{% if user.is_authenticated %}{% if user.id == post.author.id %} 
+{% if user.is_authenticated %}{% if user.id == post.author.id %}
 
 <div class="user_changes">
         <small><a href="{% url 'update_post' post.pk %}">Edit |</a></small>
@@ -18,9 +18,15 @@
 {% endif %}
 {% endif %}
 {% comment %} {% endcomment %}
-
-<p>{{post.body|safe }}</p>
+<div class="story_body">
+        <p>{{ post.body|safe }}</p>
+</div>
 <br><br />
+<div class="image-container">
+        {% if post.image.url %}
+        <img src=" {{ post.image.url }}" class="card-img-top" alt="Image uploaded by user">
+        {% endif %}
+</div>
 <hr>
 <br />
 {% if user.is_authenticated %}

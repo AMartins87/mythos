@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'ckeditor',
+    'django_summernote',
+    # 'ckeditor',
     'users',
     'blog',
 ]

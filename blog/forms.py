@@ -3,19 +3,20 @@ from .models import Post, Comment, Contact
 
 
 class PostForm(forms.ModelForm):
+
     class Meta:
+        """
+        Bootstrap styled and populated fields
+        """
         model = Post
-        fields = ('title', 'title_tag', 'author', 'body')
+        fields = ('title', 'author', 'body', 'image')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control',
-                                            'placeholder': 'title of post'}),
-            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control',
                                              'value': '', 'id': 'user',
                                              'type': 'hidden'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-
         }
 
 

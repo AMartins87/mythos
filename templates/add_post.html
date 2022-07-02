@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
-{% block title %} {% endblock %}
-
+{% block title %}Add your own story{% endblock %}
 {% block content %}
 
 <h2 class="my-4">Share your story</h2>
 <p>Add new myth, folklore story or just an urban legend</p>
+
 <br>
-
-<div class="form-group">
-    <form method="POST">
-
+<div class="mb-3">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}
+        {{ body | safe }}
         <div class="d-grid">
             <button class="btn btn-dark btn-lg">Post</button>
         </div>
@@ -24,3 +23,4 @@
 </script>
 
 {% endblock %}
+
