@@ -9,10 +9,11 @@ class PostForm(forms.ModelForm):
         Bootstrap styled and populated fields
         """
         model = Post
-        fields = ('title', 'author', 'body', 'image')
+        fields = ('title', 'title_tag', 'author', 'body', 'story_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control',
                                              'value': '', 'id': 'user',
                                              'type': 'hidden'}),

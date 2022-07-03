@@ -11,5 +11,6 @@ class BlogAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'post_date')
     summernote_fields = ('body')
 
+
 admin.site.register(Comment)
 admin.site.register(Contact)

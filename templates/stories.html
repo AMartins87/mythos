@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} {% endblock %}
+{% block title %} {{post.title_tag}} {% endblock %}
 
 {% block content %}
 
@@ -8,6 +8,7 @@
 <em>{{ post.post_date }}</em>
 
 {% comment %} added {% endcomment %}
+<small><a class="return_home" href="{% url 'home' %}">Return</a></small><br />
 {% if user.is_authenticated %}{% if user.id == post.author.id %}
 
 <div class="user_changes">
@@ -23,8 +24,8 @@
 </div>
 <br><br />
 <div class="image-container">
-        {% if post.image.url %}
-        <img src=" {{ post.image.url }}" class="card-img-top" alt="Image uploaded by user">
+        {% if post.story_image.url %}
+        <img src=" {{ post.story_image.url }}" class="card-img-top" alt="Image uploaded by user">
         {% endif %}
 </div>
 <hr>

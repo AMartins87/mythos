@@ -8,10 +8,10 @@ from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     title = models.CharField(max_length=250)
-    title_tag=models.CharField(max_length=255, default="")
+    title_tag = models.CharField(max_length=50, default="")
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     body = models.TextField(blank=True, null=True)
-    image = CloudinaryField('image', default='placeholder')
+    story_image = CloudinaryField('image', default='placeholder')
     likes = models.ManyToManyField(User, related_name="blog_post", blank=True)
     post_date = models.DateField(auto_now_add=True)
 
