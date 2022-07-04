@@ -35,15 +35,17 @@
                             {% if x.story_image.url %}
                             <img src=" {{ x.story_image.url }}" class="card-img-top" alt="User image">
                             {% else %}
-                            <img src="https://res.cloudinary.com/mythos/image/upload/v1656843959/placeholder_image_2_f6iolt.jpg"
-                            class="card-img-top" alt="Placeholder image">
+                            <img src='/media/images/placeholder_image_2.jpg' class="card-img-top"
+                                alt="Placeholder image">
+                            <!-- <img src="https://res.cloudinary.com/mythos/image/upload/v1656258703/pexels-amar-preciado-9969537_mstn4h.jpg"
+                                class="card-img-top" alt="Placeholder image if user did not upload an image"> -->
                             {% endif %}
                         </div>
                         <ul>
                             <!-- preview of story -->
                             <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
                             </br>
-                            {{ x.body|slice:":195"|safe }}...<br />
+                            {{ x.body|slice:":200"|safe }}...<br />
                             <a href="{% url 'blog' x.pk %}">Read full story</a><br />
                             <hr>
                             </li>
