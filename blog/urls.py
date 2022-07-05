@@ -12,5 +12,5 @@ urlpatterns = [
     path('blog/delete/<int:pk>', DeletePostView.as_view(), name="delete_post"),
     path('like/<int:pk>', LikeView, name="like_post"),
     path('blog/<int:pk>/comment/', AddCommentView.as_view(), name="comment"),
-    path('contact/', ContactView.as_view(), name='contact'),
+    path('contact/', ContactView.as_view(), name="contact"),
 ]

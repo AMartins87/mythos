@@ -31,6 +31,9 @@ class StoryView(DetailView):
 
 
 class AddPostView(CreateView):
+    """
+    Adding a new story view
+    """
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
@@ -50,12 +53,16 @@ class DeletePostView(DeleteView):
 
 
 class AddCommentView(CreateView):
+    """
+    Adding a comment to a post view
+    """
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
+        form.instance.name = self.request.user.username
         return super().form_valid(form)
 
     success_url = reverse_lazy('home')
