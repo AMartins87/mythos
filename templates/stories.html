@@ -1,16 +1,28 @@
 {% extends 'base.html' %}
-{% block title %} {{post.title_tag}} {% endblock %}
+{% block title %} {{ post.title_tag }} {% endblock %}
 
 {% block content %}
+<!-- Story title -->
+<h3>
+        {{post.title}}
+</h3>
 
-<h3>{{post.title}}</h3><br />
-<h6>by {{post.author }}</h6>
-<em>{{ post.post_date }}</em>
+<br />
+<!-- Author's name -->
+<h6>
+        by {{post.author }}
+</h6>
+<!-- Date of posting -->
+<em>
+        {{ post.post_date }}
+</em>
 
 {% comment %} added {% endcomment %}
+<!-- Return button for users to be able to return to home page -->
 <small><a class="return_home" href="{% url 'home' %}">Return</a></small><br />
 {% if user.is_authenticated %}{% if user.id == post.author.id %}
 
+<!-- If logged in user is the author of the story, Edit and Delete buttons will show -->
 <div class="user_changes">
         <small><a href="{% url 'update_post' post.pk %}">Edit |</a></small>
         <small><a href="{% url 'delete_post' post.pk %}">Delete</a></small>
@@ -19,18 +31,22 @@
 {% endif %}
 {% endif %}
 {% comment %} {% endcomment %}
+<!-- Full story body -->
 <div class="story_body">
         <p>{{ post.body|safe }}</p>
 </div>
 <br><br />
+<!-- Image uploaded by a user -->
 <div class="image-container">
-        {% if post.story_image.url %}
+        {% if post.story_image.url is not none %}
         <img src=" {{ post.story_image.url }}" class="card-img-top" alt="Image uploaded by user">
+
         {% endif %}
 </div>
 
 <hr>
 <br />
+<!-- If user is logged in they can press the like button -->
 {% if user.is_authenticated %}
 
 <form action="{% url 'like_post' post.pk %}" method="POST">
@@ -45,19 +61,28 @@
 
 <b>{{total_likes}} likes</b>
 <br />
-
+<!-- If user is logged in they can leave a comment -->
 <h2>Comments:</h2>
 
 {% if not post.comments.all %} No Comments Yet
-{% else %}
-{% for comment in post.comments.all %}
 
-<strong>{{comment.name}} - {{comment.date_added }}</strong><br />{{comment.body}}
+{% else %}
+
+{% for comment in post.comments.all %}
+<!-- Name of the person who commented, date of comment and the comment text -->
+<strong>{{comment.name}} - {{comment.date_added }}</strong><br />
+
+{{comment.body}}
+
 <br />
 
 {% endfor %}
+
 {% endif %}
+
 <br />
+<!-- Link to a comment page  -->
 <a href="{% url 'comment' post.pk %}">Add comments</a>
 <hr>
+
 {% endblock %}

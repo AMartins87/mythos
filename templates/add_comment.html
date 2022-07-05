@@ -2,7 +2,7 @@
 {% block title %} {% endblock %}
 
 {% block content %}
-
+<!-- Logged in users can leave a comment here -->
 <h3 class="my-4">Add comment</h3>
 
 <div class="form-group" placeholder="Leave your comment here">
@@ -12,6 +12,7 @@
         {% csrf_token %}
 
         {{ form.as_p }}
+        <!-- Submit button comment -->
         <div class="d-grid">
             <button class="btn btn-dark">Add comment</button>
         </div>
