@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     title_tag = models.CharField(max_length=50, default="")
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     body = models.TextField(blank=True, null=True)
@@ -38,8 +38,9 @@ class Comment(models.Model):
 
 
 class Contact(models.Model):
+    name = models.CharField(max_length=50, default="")
     email = models.EmailField()
-    subject = models.CharField(max_length=250)
+    subject = models.CharField(max_length=50)
     message = models.TextField()
 
     def __str__(self):

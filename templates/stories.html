@@ -70,11 +70,12 @@
 
 {% for comment in post.comments.all %}
 <!-- Name of the person who commented, date of comment and the comment text -->
-<strong>{{comment.name}} - {{comment.date_added }}</strong><br />
+<strong>{{comment.name}} - {{comment.date_added }}</strong>
 
 {{comment.body}}
 
 <br />
+<hr>
 
 {% endfor %}
 

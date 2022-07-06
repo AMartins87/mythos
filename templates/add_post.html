@@ -7,18 +7,23 @@
 
 <br>
 <!-- Basic form with required name, email and body of story -->
-<div class="mb-3">
-    <form method="POST" enctype="multipart/form-data">
+<div class="py-3">
+    <form class="story" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+
         {{ form.media }}
+
         {{ form.as_p }}
+
         {{ body | safe }}
+        
         <!-- Post a new story button -->
         <div class="d-grid">
             <button class="btn btn-dark btn-lg">Post</button>
         </div>
     </form>
 </div>
+
 <script>
     var name = "{{user.id}}";
     document.getElementById("user").value = name;

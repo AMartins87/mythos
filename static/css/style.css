@@ -182,10 +182,41 @@ div a:hover {
     text-shadow: 0 0 black;
 }
 
+/* Add story */ 
+
+form.story p {
+    width: 85vw;
+}
+
+/* Updat a story */
+
+.py-3.update form {
+    display: grid;
+    width: 85vw;
+}
+
+.py-3.update form textarea {
+    font-family: monospace;
+}
+
+.py-3.update form #id_title {
+    font-family: monospace;
+}
+
+.py-3.update form #id_title, #id_body {
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+}
+
 /* Make a comment */
 
 .btn-dark {
     border-radius: 25px;
+}
+
+/* Update story */
+.py-3.contact p {
+    display: grid;
 }
 
 /* Delete story */ 
@@ -204,6 +235,22 @@ strong {
 
 .buttons {
     display: inline;
+}
+
+/* Contact page */
+
+.py-3 {
+    position: relative;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.py-3.contact p {
+    display: grid;
+}
+
+.py-3.contact input, textarea {
+    border: 1px solid #ced4da;
+    font-family: monospace;
 }
 
 /* Small screens (iPhones) */

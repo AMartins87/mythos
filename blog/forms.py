@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
         Bootstrap styled and populated fields
         """
         model = Post
-        fields = ('title', 'title_tag', 'author', 'body', 'story_image')
+        fields = ('title', 'author', 'body', 'story_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -19,6 +19,11 @@ class PostForm(forms.ModelForm):
                                              'type': 'hidden'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        #  Removes the label 'body' from above the comment box
+        self.fields['body'].label = "Story"
 
 
 class CommentForm(forms.ModelForm):

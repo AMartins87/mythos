@@ -5,18 +5,22 @@
 
 {% block content %}
 
-<h2 class="my-4">Update the post</h2>
+<h2 class="py-3">Update the post</h2>
+<div class="py-3 update">
+    <div class="form-group">
+        <form method="POST">
 
-<div class="form-group">
-    <form method="POST">
+            {% csrf_token %}
 
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <div class="d-grid">
-            <button class="btn btn-dark">Update</button>
-        </div>
-    </form>
+            {{ form.media }}
+
+            {{ form.as_table }}
+
+            <div class="d-grid">
+                <button class="btn btn-dark">Update</button>
+            </div>
+        </form>
+    </div>
+
 </div>
-
 {% endblock %}
