@@ -48,7 +48,7 @@
                             <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
                             </br>
                             {{ x.body|slice:":200"|safe }}...<br />
-                            <a href="{% url 'blog' x.pk %}">Read full story</a><br />
+                            <a href="{% url 'blog' x.pk %}" class="story">Read full story</a><br />
                             <hr>
                     
 
