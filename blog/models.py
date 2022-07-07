@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
+    """Post model"""
     title = models.CharField(max_length=50)
     title_tag = models.CharField(max_length=50, default="")
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
@@ -17,6 +18,9 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author)
 
     def get_absolute_url(self):
+        """
+        Method to tell Django how to calculate the canonical URL
+        """
         return reverse('home')
 
     def total_likes(self):
@@ -38,11 +42,14 @@ class Comment(models.Model):
 
 
 class Contact(models.Model):
+    """Contact model"""
     name = models.CharField(max_length=50, default="")
     email = models.EmailField()
     subject = models.CharField(max_length=50)
     message = models.TextField()
 
     def __str__(self):
-        # this is just to preview the contact model as email on admin dashboard
+        """
+        Allows to review the contact model as email on admin dashboard
+        """
         return self.email

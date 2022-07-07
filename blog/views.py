@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.views.generic import (ListView, DetailView,
                                   CreateView, DeleteView, UpdateView)
 from django.urls import reverse_lazy, reverse
@@ -8,11 +8,17 @@ from .forms import PostForm, CommentForm, ContactForm
 
 
 class HomeView(ListView):
+    """
+    Home page view
+    """
     model = Post
     template_name = 'index.html'
 
 
 class StoryView(DetailView):
+    """
+    Story view
+    """
     model = Post
     template_name = 'stories.html'
 
@@ -40,12 +46,18 @@ class AddPostView(CreateView):
 
 
 class UpdatePostView(UpdateView):
+    """
+    Updating a story view
+    """
     model = Post
     template_name = 'update_post.html'
     fields = ('title', 'body')
 
 
 class DeletePostView(DeleteView):
+    """
+    Deleting story view
+    """
     model = Post
     template_name = 'delete_post.html'
 
@@ -81,6 +93,9 @@ def LikeView(request, pk):
 
 
 class ContactView(CreateView):
+    """
+    Contact view
+    """
     model = Contact
     form_class = ContactForm
     template_name = 'contact.html'

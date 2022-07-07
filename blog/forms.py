@@ -3,10 +3,11 @@ from .models import Post, Comment, Contact
 
 
 class PostForm(forms.ModelForm):
-
+    """Comment form"""
     class Meta:
         """
-        Bootstrap styled and populated fields
+        Class that uses bootstrap classes to style fields and
+        Populate fields when creating a post.
         """
         model = Post
         fields = ('title', 'author', 'body', 'story_image')
@@ -27,8 +28,12 @@ class PostForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
-
+    """Form for commenting """
     class Meta:
+        """
+        Class that uses bootstrap classes to style fields and
+        Populate fields when commenting on a post.
+        """
         model = Comment
         fields = ('name', 'body')
         widgets = {
@@ -45,6 +50,13 @@ class CommentForm(forms.ModelForm):
 
 
 class ContactForm(forms.ModelForm):
+    """
+    The contact form for sending comments to site administrator
+    """
     class Meta:
+        """
+        Class that uses bootstrap classes to style fields and
+        Populate fields when user uses the contact form.
+        """
         model = Contact
         fields = '__all__'
