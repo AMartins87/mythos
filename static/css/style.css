@@ -50,13 +50,6 @@ a.navbar-brand {
 
 /* Footer */
 
-/* footer.m-0 {
-    display: inline-grid;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-} */
-
 .py-3 {
     position: relative;
     font-family: 'Gloria Hallelujah', cursive;
@@ -64,9 +57,14 @@ a.navbar-brand {
 }
 
 footer a {
-    color: black;
+    /* color: black; */
     font-size: x-large;
     padding-right: 8px;
+}
+
+div a.social {
+    color: black;
+    text-decoration: none;    
 }
 
 .social:hover {
@@ -102,15 +100,11 @@ ul {
     left: 50%;
     padding: 6px;
     color: white;
-    border: 3px solid 00003f;
+    border: 3px solid none;
     transform: translate(-50%, -50%);
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
-}
-
-.container-fluid {
-    width: -webkit-fill-available;
 }
 
 .btn-light {
@@ -172,10 +166,10 @@ ul {
     padding: 20px;
 }
 
-div a {
-    color: #729cdb;
-    text-decoration: none;
-    
+div a  {
+    color:#ee0f65;
+    font-weight: bold;
+    text-decoration: none;    
 }
 
 div a:hover {

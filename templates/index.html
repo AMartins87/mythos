@@ -29,7 +29,7 @@
 <div class="latest-stories text center">
     <h2 class="m-auto text-center">Latest Stories</h2>
     <div class="mx-auto mt-11 text-center" style="width: auto;">
-        <ol>
+       
             {% for x in object_list %}
             <div class="col-md-auto index-card">
                 <div class="card mb-3">
@@ -43,17 +43,17 @@
                                 class="card-img-top" alt="Placeholder image if user did not upload an image">
                             {% endif %}
                         </div>
-                        <ul>
+                     
                             <!-- Title of story, date of posting and preview of the story with a button to read the full story -->
                             <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
                             </br>
                             {{ x.body|slice:":200"|safe }}...<br />
                             <a href="{% url 'blog' x.pk %}">Read full story</a><br />
                             <hr>
-                        </ul>
+                    
 
                         {% endfor %}
-        </ol>
+                   
     </div>
 </div>
 

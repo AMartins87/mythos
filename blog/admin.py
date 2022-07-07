@@ -14,8 +14,3 @@ class BlogAdmin(SummernoteModelAdmin):
 
 admin.site.register(Comment)
 admin.site.register(Contact)
-
-# @admin.register(Contact)
-# class ContactAdmin(SummernoteModelAdmin):
-#     list_display = ('name', 'user', 'email')
-#     summernote_fields = ('message')

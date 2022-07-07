@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} {% endblock %}
+
+{% block title %}
+
+{% endblock %}
 
 {% block content %}
+
 <h2 class="my-4">Contact Us</h2>
 <!-- Wrapper container -->
 <div class="container py-3 contact">
@@ -14,13 +18,14 @@
 
             {% csrf_token %}
 
-            {{ form.as_p }}
+            {{form.as_p}}
 
             {% comment %}
 
             {% endcomment %}
+             <!-- Send comment button -->
             <div class="d-grid">
-                <button class="btn btn-dark ">Send</button>
+                <button class="btn btn-dark">Send</button>
             </div>
         </form>
     </div>
