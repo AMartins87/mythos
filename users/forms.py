@@ -1,10 +1,12 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 
 
-# registration
 class SignUpForm(UserCreationForm):
+    """
+    Registration form
+    """
     email = forms.EmailField()
     first_name = forms.CharField(max_length=100,
                                  widget=forms.TextInput
@@ -14,11 +16,13 @@ class SignUpForm(UserCreationForm):
                                 (attrs={'class': 'form-control'}))
 
     class Meta:
+        """
+        Displays fields for registering a user to this page
+        """
         model = User
         fields = ('username', 'first_name', 'last_name',
                   'email', 'password1', 'password2')
 
-    # styling the form
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs['class'] = 'form-control'
