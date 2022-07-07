@@ -5,21 +5,30 @@ Mythos is full-stack framework project built using Django, Python, HTML and CSS.
 
 Live project can be found [here](https://mythoi.herokuapp.com/).
 
+![Am I Responsive](./media/images/main_image.JPG)
 
+*Please press **Ctrl** in Windows or **Command** on Mac button and click for any links which you would like to open in a new tab when in the README.md file*
+
+
+# STRATEGY PLANE / USER EXPERIENCE
 ## USER STORIES
 
 As a site user and site admin I want to be able to login/logout of my account so I can interact with the site’s posts and users
 
 # External user’s goal:
 ## *As a site user:*
-    - I can click on a post so I can read it in full
-    - I want to be able to write my own posts and comment on other stories so I can exchange opinions and ideas with other users and the blog owner (*this attracts more traffic and makes the site social*)
-    - I want to be able to like posts so I can show the users and site admin I have liked their content 
+    - I can click on a post so I can read it in full.
+    - I want to be able to write my own posts and comment on other stories so I can exchange opinions and ideas with other users and the blog owner. This attracts more traffic and makes the site social.
+    - I want to be able to like posts so I can show the users and site admin I have liked their content.
 
 # Site owner's goal:
 ## *As a site admin:*
     - I can create/publish new posts so that I can keep the blog updated and relevant to its purpose
     - I can edit/delete posts so I can correct typos or incorrect information which I may have provided
+
+# AGILE
+The development of this project was managed and implemented using GitHub Project Kanban Board.
+![Kanban](./media/images/kanban_project_issues.JPG)
 
 ## FEATURES 
 # Main Page
