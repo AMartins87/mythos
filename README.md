@@ -45,7 +45,7 @@ The development of this project was managed and implemented using GitHub Project
 
 ![Navbar image](./media/images/navbar_hero_image_logged_in.JPG)
 
-- Navbar on small screens
+- Navbar on small screens with collapsible menu icon
 
 ![Mobile navbar image](./media/images/navbar_small_screens.JPG)
     
