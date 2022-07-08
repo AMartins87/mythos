@@ -5,15 +5,15 @@
 {% block content %}
 
 <!-- Home image and overlay box with welcome message and login/register button -->
-<div class="container-fluid hero-image mh-50"
-    style="height:332px;
-        background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656758722/background-image_j2nkcs.jpg');">
+<div class="container-fluid hero-image mh-50" style="height:332px;
+     background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656758722/background-image_j2nkcs.jpg') ;">
     <div class="hero-text">
         <h1 class="text-center page-title">Welcome to Mythos</h1>
 
         <p class="text-center">You can find here myths, legends and folklore stories from all over the world.<br>
             {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}" class="btn btn-light btn-login-register">Logout
+            <a href="{% url 'logout' %}">
+                <button class="btn btn-light btn-login-register">Logout</button>
             </a>
             {% else %}
 
@@ -23,43 +23,41 @@
         </p>
 
     </div>
-
-
-    <!-- Latest stories section -->
-    <div class="latest-stories text center">
-        <h2 class="m-auto text-center">Latest Stories</h2>
-
-        <div class="mx-auto mt-11 text-center" style="width: auto;">
-
-            {% for x in object_list %}
-
-            <div class="col-md-auto index-card">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <!-- User uploaded image or a basic preselected placeholder image if user chose not to upload one -->
-                        <div class="image-container">
-                            {% if x.story_image.url is not none %}
-                            <img src=" {{ x.story_image.url }}" class="card-img-top" alt="User image">
-                            {% else %}
-                            <img src="https://res.cloudinary.com/mythos/image/upload/v1656843959/placeholder.jpg"
-                                class="card-img-top" alt="Placeholder image if user did not upload an image">
-                            {% endif %}
-                        </div>
-
-                        <!-- Title of story, date of posting and preview of the story with a button to read the full story -->
-                        <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
-                        <br>
-                        {{ x.body|slice:":200"|safe }}...<br />
-                        <a href="{% url 'blog' x.pk %}" class="story">Read full story</a><br>
-                        <hr>
-
-                        {% endfor %}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-{% endblock %}
+<!-- Latest stories section -->
+<div class="latest-stories text center">
+    <h2 class="m-auto text-center">Latest Stories</h2>
+    <div class="mx-auto mt-11 text-center" style="width: auto;">
+
+        {% for x in object_list %}
+        <div class="col-md-auto index-card">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <!-- User uploaded image or a basic preselected placeholder image if user chose not to upload one -->
+                    <div class="image-container">
+                        {% if x.story_image.url is not none %}
+                        <img src=" {{ x.story_image.url }}" class="card-img-top" alt="User image">
+                        {% else %}
+                        <img src="https://res.cloudinary.com/mythos/image/upload/v1656843959/placeholder.jpg"
+                            class="card-img-top" alt="Placeholder image if user did not upload an image">
+                        {% endif %}
+                    </div>
+
+                    <!-- Title of story, date of posting and preview of the story with a button to read the full story -->
+                    <h5>{{ x.title }}</h5>{{ x.post_date }}<br>
+                    <br>
+                    {{ x.body|slice:":200"|safe }}...<br />
+                    <a href="{% url 'blog' x.pk %}" class="story">Read full story</a><br>
+                    <hr>
+
+
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+
+
+        {% endblock %}
