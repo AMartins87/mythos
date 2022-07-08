@@ -149,8 +149,6 @@ This project was created in GitHub and deployed to Heroku.
 11.  All changes added with add, commit and push commands in Github
 12. Deployed content manually through Heroku 
 
-
-
 # CREDITS
 
 ## MEDIA
@@ -158,16 +156,20 @@ This project was created in GitHub and deployed to Heroku.
 - **Hero image** on home page was created by me in [Canva](canva.com)
 - **Placeholder image** which is used as a placeholder image when users don't upload their own was create by me in [Canva](canva.com)
 
+- **README main image** was screenshoted from [Am I Responsive](https://ui.dev/amiresponsive?url=https://mythoi.herokuapp.com/)
+
 - [Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
 
 - [The Legend of the Almond Trees in Algarve](https://pixels.com/featured/tunnel-thru-blooming-almond-trees-sheila-fitzgerald.html) by Sheila Fitzgerald, Pixels
+
+- [Slender Man](https://villains.fandom.com/f/t/Slender%20Man) - no author provided for this iamge
 
 ## ACKNOWLEDGMENT
 
 ### Code Institute
 - For providing the basic structure via the walkthrough project Codestar for my blog project
 
-### Tutor Support
+### [Tutor Support](https://learn.codeinstitute.net/ci_support/diplomainsoftwaredevelopmentecommerce/tutor)
 - For helping with restarting my project and helping me found the core of the issue
 - For guiding on how to fix a bug when my project didn't want to open up
 
