@@ -37,39 +37,40 @@ The development of this project was managed and implemented using GitHub Project
     - Register
     - Login
     - Contact Us
-- Hero image with welcome text box and register/login button
+
+**Hero image with welcome text box and register/login button**
 
 ![Navbar image](./media/images/navbar_hero_image.JPG)
 
-- Navbar and hero image with welcome text box and logout button (after user login)
+**Navbar and hero image with welcome text box and logout button (after user login)**
 
 ![Navbar image](./media/images/navbar_hero_image_logged_in.JPG)
 
-- Navbar on small screens with collapsible menu icon
+**Navbar with collapsible menu icon for screens with width of 991px or less**
 
 ![Mobile navbar image](./media/images/navbar_small_screens.JPG)
     
-- Footer
-    - Copyright information
-    - Social media links for YouTube, Twitter, Facebook
+**Footer**
+- Copyright information
+- Social media links for YouTube, Twitter, Facebook
 
 ![Footer image](./media/images/footer.JPG)
 
 ## Latest stories
 
-- Latest stories section where all story previews with uploaded image show up in list order with  ***Read full story*** click through link which will take the user to the full story
+**Latest stories** section where all story previews with uploaded image show up in list order with  ***Read full story*** click through link which will take the user to the full story
 
 ![Latest stories](./media/images/latest_stories_section.JPG)
 
-- If users don't upload their own images, an image will feed through from Cloudinary as a placeholder
+If users don't upload their own images, an image will feed through from Cloudinary as a placeholder
 
 ![Latest stories with placeholder image](./media/images/latest_stories_section_no_image.JPG)
 
-- Page with the full view of the story as an user
+Page with the full view of the story as an user
 
 ![Full story](./media/images/story_page_user_view.JPG)
 
-- Page with the full view of the story as an author which shows *edit* and *delete* links underneath the author's name & date of posting
+Page with the full view of the story as an author which shows *edit* and *delete* links underneath the author's name & date of posting
 
 ![Full story](./media/images/story_page_author_view.JPG)
 
@@ -79,20 +80,21 @@ The development of this project was managed and implemented using GitHub Project
 
 ## Add story page
 
-- If users are not logged in it will redirect them to login page before they can add a story
-- Otherwise users are taken to the correct page immediately. They must fill in **title**, add **story** text and can choose to upload an image if they wish so. This image is then saved to my Cloudinary database
+If users are not logged in it will redirect them to login page before they can add a story.
+
+Otherwise users are taken to the correct page immediately. They must fill in **title**, add **story** text and can choose to upload an image if they wish so. This image is then saved to my Cloudinary database
 
 ![Add story page](./media/images//add_story_page.JPG)
 
 ## Delete post page
 
-- Users are shown title of the story to be deleted and asked if they are sure to delete and two buttons are shown - *Delete* abd *Go back* which will take the user back to home page
+Users are shown title of the story to be deleted and asked if they are sure to delete and two buttons are shown - *Delete* abd *Go back* which will take the user back to home page
 
 ![Delete post](./media/images/delete_post_page.JPG)
 
 ## Contact page
 
-- Users can contact the site administrator by filling in simple form on screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
+Users can contact the site administrator by filling in simple form on screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
 
 ![Contact page](./media/images/contact_page.JPG)
 
@@ -153,16 +155,16 @@ This project was created in GitHub and deployed to Heroku.
 
 ## MEDIA
 
-- **Hero image** on home page was created by me in [Canva](canva.com)
-- **Placeholder image** which is used as a placeholder image when users don't upload their own was create by me in [Canva](canva.com)
+**Hero image** on home page was created by me in [Canva](canva.com)
+**Placeholder image** which is used as a placeholder image when users don't upload their own was create by me in [Canva](canva.com)
 
-- **README main image** was screenshoted from [Am I Responsive](https://ui.dev/amiresponsive?url=https://mythoi.herokuapp.com/)
+**README main image** was screenshoted from [Am I Responsive](https://ui.dev/amiresponsive?url=https://mythoi.herokuapp.com/)
 
-- [Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
+[Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
 
-- [The Legend of the Almond Trees in Algarve](https://pixels.com/featured/tunnel-thru-blooming-almond-trees-sheila-fitzgerald.html) by Sheila Fitzgerald, Pixels
+[The Legend of the Almond Trees in Algarve](https://pixels.com/featured/tunnel-thru-blooming-almond-trees-sheila-fitzgerald.html) by Sheila Fitzgerald, Pixels
 
-- [Slender Man](https://villains.fandom.com/f/t/Slender%20Man) - no author provided for this iamge
+[Slender Man](https://villains.fandom.com/f/t/Slender%20Man) - no author provided for this iamge
 
 ## ACKNOWLEDGMENT
 
