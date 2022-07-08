@@ -34,15 +34,18 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.nav-link {
-    padding: 0.5rem 1rem;
-    color: #9b9d9e;
+.navbar-light .navbar-nav .nav-link {
+    color: black;
     font-weight: normal;
 }
 
-.nav-link:focus,
-.nav-link:hover {
-    color: lightgrey;
+.navbar-light .navbar-nav .nav-link:hover{
+    background-color: #A30A45;
+    border-radius: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
 }
 
 a.navbar-brand {
@@ -64,7 +67,7 @@ footer a {
 }
 
 .social:hover {
-    color: #ee0f65;
+    color: #A30A45;
 }
 
 .btn-success:hover {
@@ -123,7 +126,7 @@ ul {
 .btn-info {
     text-align: center;
     color: white;
-    background-color: #ee0f65;
+    background-color: #A30A45;
 }
 
 /* Latest stories section */
@@ -145,7 +148,7 @@ div .card {
 /* Story click-through */ 
 
 .btn.btn-success {
-    background-color: #ee0f65;
+    background-color: #A30A45;
     border-color: lightpink;
     border-radius: 20px;
 }
@@ -157,7 +160,7 @@ div .card {
 .return_home {
     text-decoration: none;
     font-weight: bold;
-    color: #ee0f65;
+    color: #A30A45;
     font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -166,7 +169,7 @@ div .card {
 }
 
 div a.story {
-    color:#ee0f65;
+    color:#A30A45;
     font-weight: bold;
     text-decoration: none;    
 }
@@ -275,7 +278,7 @@ strong {
     }
 
     .btn.btn-login-register:hover{
-        background-color: #ee0f65;
+        background-color: #A30A45
     }
 
     .story_body {
