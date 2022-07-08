@@ -256,14 +256,22 @@ strong {
 /* Medium screens - 850px and down */
 @media screen and (max-width: 850px) {
 
+    body {
+        width: 100vw;
+        padding: 0;
+    }
+
     .card-img, .card-img-top {
         height: 30vh;
         width: 85vw;
     }
 
-   div.card-body {
-        margin: 0;
+    .card-body {
+        padding: 0rem;
+    }
 
+    div.card-body {
+        width: 85vw;
     }
 }
 
