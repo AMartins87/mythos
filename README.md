@@ -107,56 +107,80 @@ Wireframes were created using Balsamiq.
 
 
 
-## TESTING
+# TESTING
 See all testing documentation [here](/TESTING.md).
 
-## BUGS
-# Fixed bugs
-1. After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
+# BUGS
+## Fixed bugs
+
+1. When I returned after my study break I had to reinstall all the Django libraries and packages which I have all successfully installed. I had to contact Tutor Support as I wasn't sure where the issue was. 
+It was a very simple fix - I forgot to recreate a new *env.py* file. 
+2. When trying to open up the browser with command *python3 manage.py runserver*, there was an error coming up. As I haven't made any changes since I worked on the project the previous night and all worked then, I decided to contact **Tutor Support** as the error was completely unknown to me. Again this was an easy fix, as Heroku has run updates and I had to only copy over a new **DATABASE_URL** into my *env.py* file.
+
+    ![Bug image 1](/media/images/bug_4jul.JPG)
+
+3. After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
     - I reverted all migrations I made till this point, using a command *./manage.py migrate blog zero*, then I proceeded with *python manage.py makemigrations > python manage.py migrate* and all was ok then.
 
-![Bug image1 1](/media/images/browser_error.png)
-![Bug image1 1](/media/images/terminal_error.png)
+        ![Bug image 2](/media/images/browser_error.png)
+        ![Bug image 3](/media/images/terminal_error.png)
 
-2. During the final testing I found out my collapsible menu icon is not opening up the menu on smaller screens. The issue got fixed by reverting from Bootstrap version 5.1.3 to 4.3.1. 
+4. During the final testing I found out my collapsible menu icon is not opening up the menu on smaller screens. The issue got fixed by reverting from Bootstrap version 5.1.3 to 4.3.1. 
 
 ## Unfixed bugs
 
+No known unfixed bugs.
 
-## DEPLOYMENT
+# DEPLOYMENT
 This project was created in GitHub and deployed to Heroku. 
 
-### Following steps were taken in deployment of this project: 
+## Following steps were taken in deployment of this project: 
 
 1.  Using the CI full template, new repository was created and named Mythos
-2.  When in the new repository, following Django packages and supporting libraries were installed by using the command *pip3 install* : **Gunicorn, Psycopg, Cloudinary**.
+2.  When in the new repository, following Django packages and supporting libraries were installed by using the command ***pip3 install*** : **Gunicorn, Psycopg, Cloudinary**.
 3.  *Requirements.txt* file was created and updated
-4.  Project and app were created, app was added to my *settings.py* file into INSTALLED_APPS section
+4.  Project and app were created, app was added to my ***settings.py*** file into INSTALLED_APPS section
 5.  First migration and testing of the server
 6.  After the first migration, new app was created in Heroku, add-on of Postgres database was added to app resources
-7.  Database attachment in GitPod by creating *env.py* and adding Postgres database link, SECRET_KEY and my Cloudinary link
+7.  Database attachment in GitPod by creating ***env.py*** and adding Postgres database link, SECRET_KEY and my Cloudinary link
 8.  Entered Secret Key, Cloudinary and Postgres database to Config Vars in Heroku
 9.  Created templates, media and static files on top level of the directory
-10.  Created Procfile and added my gunicorn code
+10.  Created **Procfile** and added my gunicorn code
 11.  All changes added with add, commit and push commands in Github
 12. Deployed content manually through Heroku 
 
 
 
-## CREDITS
+# CREDITS
 
-https://www.w3schools.com/ 
-https://getbootstrap.com/docs/5.0
-https://docs.djangoproject.com/en/4.0/
-https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/
+## MEDIA
 
-Images
-https://unsplash.com/photos/GtTNR-nxbK4 - mermaid by Naja Bertolt Jensen, Unsplash
+- **Hero image** on home page was created by me in [Canva](canva.com)
 
-https://www.pexels.com/photo/low-angle-view-on-person-wearing-costume-of-ancient-god-9969537/ - Person with facemask by Amar Preciado, Pexels
+- [Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
 
-https://www.pexels.com/photo/the-trojan-horse-6474435/ - Trojan horse by KEMAL HAYIT, Pexels
+- [The Legend of the Almond Trees in Algarve](https://pixels.com/featured/tunnel-thru-blooming-almond-trees-sheila-fitzgerald.html) by Sheila Fitzgerald, Pixels
 
-https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/ - spider
+## ACKNOWLEDGMENT
 
-https://pixels.com/featured/tunnel-thru-blooming-almond-trees-sheila-fitzgerald.html - almond trees
+### Code Institute
+- For providing the basic structure via the walkthrough project Codestar for my blog project
+
+### Tutor Support
+- For helping with restarting my project and helping me found the core of the issue
+- For guiding on how to fix a bug when my project didn't want to open up
+
+### [Django documentation](https://docs.djangoproject.com/en/4.0/) 
+- I relied heavily on this page during the development of my project
+
+### [Stack Overflow](https://stackoverflow.com/)
+- I searched for quite few styling issues I was facing when trying to adjust the standard Bootstrap shell look. I have always found an answer/solution on there when I couldn't find solution on Bootstrap site
+
+### [Bootstrap](https://getbootstrap.com/docs/5.0)
+- Thank you for providing the basic styling for my project
+
+### [Geeks for Geeks](https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/)
+- This helped me to simplify all forms used on my project
+
+### [W3Schools](https://www.w3schools.com/)
+- Thank you for helping me with implementing an image text block on my home page
