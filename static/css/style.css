@@ -253,6 +253,20 @@ strong {
     font-family: monospace;
 }
 
+/* Medium screens - 850px and down */
+@media screen and (max-width: 850px) {
+
+    .card-img, .card-img-top {
+        height: 30vh;
+        width: 85vw;
+    }
+
+   div.card-body {
+        margin: 0;
+
+    }
+}
+
 /* Small screens (iPhones) */
 @media screen and (max-width: 577px) {
 
