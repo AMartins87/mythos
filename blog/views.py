@@ -101,3 +101,10 @@ class ContactView(CreateView):
     template_name = 'contact.html'
 
     success_url = reverse_lazy('home')
+
+
+def handler404(request, exception):
+    """
+    Handler for Bad Request 404.
+    """
+    return render(request, "404.html", status=400)

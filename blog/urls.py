@@ -3,6 +3,9 @@ from .views import (HomeView, StoryView, AddPostView,
                     AddCommentView, LikeView, UpdatePostView,
                     DeletePostView, ContactView)
 
+# Handler path to handler views
+HANDLER404 = 'blog.views.handler404'
+
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     path('blog/<int:pk>', StoryView.as_view(), name="blog"),
