@@ -65,7 +65,36 @@ The development of this project was managed and implemented using GitHub Project
 
 ![Latest stories with placeholder image](./media/images/latest_stories_section_no_image.JPG)
 
+- Page with the full view of the story as an user
 
+![Full story](./media/images/story_page_user_view.JPG)
+
+- Page with the full view of the story as an author which shows *edit* and *delete* links underneath the author's name & date of posting
+
+![Full story](./media/images/story_page_author_view.JPG)
+
+## Add comment page
+
+![Add comment page](./media/images/add_comment_page.JPG)
+
+## Add story page
+
+- If users are not logged in it will redirect them to login page before they can add a story
+- Otherwise users are taken to the correct page immediately. They must fill in **title**, add **story** text and can choose to upload an image if they wish so. This image is then saved to my Cloudinary database
+
+![Add story page](./media/images//add_story_page.JPG)
+
+## Delete post page
+
+- Users are shown title of the story to be deleted and asked if they are sure to delete and two buttons are shown - *Delete* abd *Go back* which will take the user back to home page
+
+![Delete post](./media/images/delete_post_page.JPG)
+
+## Contact page
+
+- Users can contact the site administrator by filling in simple form on screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
+
+![Contact page](./media/images/contact_page.JPG)
 
 # Wireframes
 Wireframes were created using Balsamiq.
