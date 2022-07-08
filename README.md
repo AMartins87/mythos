@@ -131,6 +131,7 @@ After creating a model for adding posts and installing ckeditor, I tried to migr
 
 I reverted all migrations I made till this point, using a command *./manage.py migrate blog zero*, then I proceeded with *python manage.py makemigrations > python manage.py migrate* and all was ok then. 
 
+During the final testing I found out my collapsible menu icon is not opening up the menu on smaller screens. The issue got fixed by reverting from Bootstrap version 5.1.3 to 4.3.1. 
 
 ## Unfixed bugs
 

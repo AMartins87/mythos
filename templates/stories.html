@@ -7,7 +7,7 @@
         {{post.title}}
 </h3>
 
-<br />
+<br>
 <!-- Author's name -->
 <h6>
         by {{post.author }}
@@ -35,7 +35,7 @@
 <div class="story_body">
         <p>{{ post.body|safe }}</p>
 </div>
-<br><br />
+<br>
 <!-- Image uploaded by a user -->
 <div class="image-container">
         {% if post.story_image.url is not none %}
@@ -45,7 +45,7 @@
 </div>
 
 <hr>
-<br />
+<br>
 <!-- If user is logged in they can press the like button -->
 {% if user.is_authenticated %}
 
@@ -60,7 +60,7 @@
 {% endif %}
 
 <b>{{total_likes}} likes</b>
-<br />
+<br>
 <!-- If user is logged in they can leave a comment -->
 <h2>Comments:</h2>
 
@@ -74,14 +74,14 @@
 
 {{comment.body}}
 
-<br />
+<br>
 <hr>
 
 {% endfor %}
 
 {% endif %}
 
-<br />
+<br>
 <!-- Link to a comment page  -->
 <a href="{% url 'comment' post.pk %}">Add comments</a>
 <hr>
