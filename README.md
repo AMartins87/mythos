@@ -153,7 +153,8 @@ This project was created in GitHub and deployed to Heroku.
 9.  Created templates, media and static files on top level of the directory
 10.  Created **Procfile** and added my gunicorn code
 11.  All changes added with add, commit and push commands in Github
-12. Deployed content manually through Heroku 
+12. Deployed content manually through Heroku by going to *Deploy* tab, connected my **GitHub** account and found my repository and connected it with **Heroku**
+13. Pressed *Enable Automatic Deploys* and then pressed *Deploy Branch* button. Once this finished, I opened my app to check all works
 
 # CREDITS
 
