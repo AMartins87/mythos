@@ -108,18 +108,7 @@ Wireframes were created using Balsamiq.
 
 
 ## TESTING
-# Manual Testing
-
-# Validator Testing
-
--   **HTML** (No errors were returned when passing through the official W3C validator) 
-    ![W3C Validator]()
-
--   **CSS** (No errors were found when passing through the official Jigsaw validator)
-    ![Jigsaw Validator]()
-
--   **PEP8** (All python code was checked via [PEP8](http://pep8online.com/) with no errors reported.)
-    ![PEP8]()
+See all testing documentation [here](/TESTING.md).
 
 
 
