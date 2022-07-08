@@ -8,7 +8,7 @@ I have tested the site functionality and created couple of normal user accounts.
 
 - Login and registration
 - Added a post with and without an image
-- Editedg and deleted a post as an author
+- Edited and deleted a post as an author
 - Commented on a post
 - Used the like button
 - Filled in the contact form 

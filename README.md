@@ -46,6 +46,10 @@ The development of this project was managed and implemented using GitHub Project
 
 ![Navbar image](./media/images/navbar_hero_image_logged_in.JPG)
 
+**Navbar and hero image with welcome text box and logout button (after admin login)**
+
+![Navbar image](./media/images/admin_login_page_view.JPG)
+
 **Navbar with collapsible menu icon for screens with width of 991px or less**
 
 ![Mobile navbar image](./media/images/navbar_small_screens.JPG)
