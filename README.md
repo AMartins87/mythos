@@ -156,6 +156,7 @@ This project was created in GitHub and deployed to Heroku.
 ## MEDIA
 
 - **Hero image** on home page was created by me in [Canva](canva.com)
+- **Placeholder image** which is used as a placeholder image when users don't upload their own was create by me in [Canva](canva.com)
 
 - [Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
 
