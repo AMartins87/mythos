@@ -110,17 +110,15 @@ Wireframes were created using Balsamiq.
 ## TESTING
 See all testing documentation [here](/TESTING.md).
 
-
-
 ## BUGS
 # Fixed bugs
-After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
+1. After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
+    - I reverted all migrations I made till this point, using a command *./manage.py migrate blog zero*, then I proceeded with *python manage.py makemigrations > python manage.py migrate* and all was ok then.
 
-![Bug images]()
+![Bug image1 1](/media/images/browser_error.png)
+![Bug image1 1](/media/images/terminal_error.png)
 
-I reverted all migrations I made till this point, using a command *./manage.py migrate blog zero*, then I proceeded with *python manage.py makemigrations > python manage.py migrate* and all was ok then. 
-
-During the final testing I found out my collapsible menu icon is not opening up the menu on smaller screens. The issue got fixed by reverting from Bootstrap version 5.1.3 to 4.3.1. 
+2. During the final testing I found out my collapsible menu icon is not opening up the menu on smaller screens. The issue got fixed by reverting from Bootstrap version 5.1.3 to 4.3.1. 
 
 ## Unfixed bugs
 
