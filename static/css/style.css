@@ -138,6 +138,10 @@ ul {
     width: auto;
 }
 
+div .card {
+    border: none;
+}
+
 /* Story click-through */ 
 
 .btn.btn-success {
@@ -147,7 +151,7 @@ ul {
 }
 
 .flex-column {
-    padding: 20px;
+    padding: 10px;
 }
 
 .return_home {
@@ -281,5 +285,9 @@ strong {
     .card-img, .card-img-top {
         height: auto;
         width: 80vw;
+    }
+
+    .card-body {
+        padding: 0.2rem 0.2rem;
     }
 }

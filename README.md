@@ -5,12 +5,12 @@ Mythos is full-stack framework project built using Django, Python, HTML and CSS.
 
 Live project can be found [here](https://mythoi.herokuapp.com/).
 
-![Am I Responsive](./media/images/main_image.JPG)
+![Am I Responsive](./media/wireframes/air_main_image.JPG)
 
 *Please press **Ctrl** in Windows or **Command** on Mac button and click for any links which you would like to open in a new tab when in the README.md file*
 
 
-# STRATEGY PLANE / USER EXPERIENCE
+# USER EXPERIENCE
 ## USER STORIES
 
 As a site user and site admin I want to be able to login/logout of my account so I can interact with the site’s posts and users
@@ -28,21 +28,44 @@ As a site user and site admin I want to be able to login/logout of my account so
 
 # AGILE
 The development of this project was managed and implemented using GitHub Project Kanban Board.
-![Kanban](./media/images/kanban_project_issues.JPG)
+![Kanban](./media/wireframes/kanban_project_issues.JPG)
 
-## FEATURES 
-# Main Page
-    - Navbar (on every page for ease of navigation)
-        - Add Story
-        - Register
-        - Login
-        - Contact Us
+# FEATURES 
+## Main Page
+- Navbar (on every page for ease of navigation)
+    - Add Story
+    - Register
+    - Login
+    - Contact Us
+- Hero image with welcome text box and register/login button
+
+![Navbar image](./media/images/navbar_hero_image.JPG)
+
+- Navbar and hero image with welcome text box and logout button (after user login)
+
+![Navbar image](./media/images/navbar_hero_image_logged_in.JPG)
+
+- Navbar on small screens
+
+![Mobile navbar image](./media/images/navbar_small_screens.JPG)
     
-    - Footer
-        - Copyright information
-        - Social media links for YouTube, Twitter, Facebook
+- Footer
+    - Copyright information
+    - Social media links for YouTube, Twitter, Facebook
 
-# Colour Scheme
+![Footer image](./media/images/footer.JPG)
+
+## Latest stories
+
+- Latest stories section where all story previews with uploaded image show up in list order with  ***Read full story*** click through link which will take the user to the full story
+
+![Latest stories](./media/images/latest_stories_section.JPG)
+
+- If users don't upload their own images, an image will feed through from Cloudinary as a placeholder
+
+![Latest stories with placeholder image](./media/images/latest_stories_section_no_image.JPG)
+
+
 
 # Wireframes
 Wireframes were created using Balsamiq.
