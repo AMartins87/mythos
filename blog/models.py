@@ -52,4 +52,4 @@ class Contact(models.Model):
         """
         Allows to review the contact model as email on admin dashboard
         """
-        return self.email
+        return str(self.email)

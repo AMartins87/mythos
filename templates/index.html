@@ -36,7 +36,7 @@
                     <!-- User uploaded image or a basic preselected placeholder image if user chose not to upload one -->
                     <div class="image-container">
                         {% if x.story_image.url is not none %}
-                        <img src=" {{ x.story_image.url }}" class="card-img-top" alt="User image">
+                        <img src=" {{ x.story_image.url }}" alt=" {{ x.title }} image"class="card-img-top" alt="User image">
                         {% else %}
                         <img src="https://res.cloudinary.com/mythos/image/upload/v1657307673/placeholder.png"
                             class="card-img-top" alt="Placeholder image if user did not upload an image">
