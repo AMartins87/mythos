@@ -221,6 +221,10 @@ form.story p {
     border-radius: 25px;
 }
 
+p.comment, a.comment {
+    display: contents;
+}
+
 /* Update a story */
 .py-3.contact p {
     display: grid;

@@ -68,7 +68,7 @@ All links directed to the correct pages as expected.
 
     ![Adding a comment testing 2](media/testing/comment_testing_2.png)
 
-3. For users to be able to comment, they need to be logged in, otherwise following message will appear above the comment window
+3. For users to be able to comment, they need to be registered and logged in
 
     ![Adding a comment testing 3](media/testing/comment_testing_3.png)
 

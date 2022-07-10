@@ -5,6 +5,8 @@
 <!-- Logged in users can leave a comment here -->
 <h3 class="my-4">Add comment</h3>
 
+{% if user.is_authenticated %}
+
 <div class="form-group" placeholder="Leave your comment here">
 
     <form method="POST">
@@ -17,6 +19,13 @@
             <button class="btn btn-dark">Add comment</button>
         </div>
     </form>
+    {% else %}
+    <p class="comment">To leave a comment, please <a class="nav-link comment" href="{% url 'login' %}">login</a> or <a
+            class="nav-link comment" href="{% url 'register' %}">register</a> first.</p>
+
+    </li>
+
+    {% endif %}
 </div>
 
 <!-- Sets rule that only registered users can write a comment -->
