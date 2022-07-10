@@ -13,6 +13,7 @@ class HomeView(ListView):
     """
     model = Post
     template_name = 'index.html'
+    ordering = ['-id']
 
 
 class StoryView(DetailView):
