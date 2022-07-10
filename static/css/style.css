@@ -189,6 +189,12 @@ div a:hover {
     text-decoration: none;
 }
 
+/* Login page */
+
+p.login, a.login {
+    display: contents;
+}
+
 /* Add a story */ 
 
 form.story p {
