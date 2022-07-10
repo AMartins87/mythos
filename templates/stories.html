@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} {{ post.title_tag }} {% endblock %}
+{% block title %} {{post.title_tag}} {% endblock %}
 
 {% block content %}
 <!-- Story title -->
@@ -52,8 +52,7 @@
 <form action="{% url 'like_post' post.pk %}" method="POST">
         {% csrf_token %}
 
-        <button type="submit" , name="post_id" , value="{{post.id}}" , class="btn btn-success me-md-2 btn-sm"
-                type="button">Like</button>
+        <button class="like" type="submit", name="post_id", value="{{post.id}}", class="btn btn-success me-md-2 btn-sm">Like</button>
 
 </form>
 

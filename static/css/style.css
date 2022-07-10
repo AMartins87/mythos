@@ -147,6 +147,13 @@ div .card {
 
 /* Story click-through */ 
 
+button.like {
+    border: 0 solid;
+    border-radius: 15px;
+    color: white;
+    background-color: #A30A46;
+}
+
 .btn.btn-success {
     background-color: #A30A45;
     border-color: lightpink;

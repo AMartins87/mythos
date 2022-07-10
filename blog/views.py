@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import (ListView, DetailView,
                                   CreateView, DeleteView, UpdateView)
 from django.urls import reverse_lazy, reverse
@@ -9,7 +9,7 @@ from .forms import PostForm, CommentForm, ContactForm
 
 class HomeView(ListView):
     """
-    Home page view
+    This view renders the home page
     """
     model = Post
     template_name = 'index.html'
@@ -17,7 +17,7 @@ class HomeView(ListView):
 
 class StoryView(DetailView):
     """
-    Story view
+    This view renders a full story view
     """
     model = Post
     template_name = 'stories.html'
@@ -56,7 +56,7 @@ class UpdatePostView(UpdateView):
 
 class DeletePostView(DeleteView):
     """
-    Deleting story view
+    View that displays delete to authors when they want to delete their post
     """
     model = Post
     template_name = 'delete_post.html'
@@ -81,6 +81,9 @@ class AddCommentView(CreateView):
 
 
 def LikeView(request, pk):
+    """"
+    View to display likes to site users
+    """
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
     if post.likes.filter(id=request.user.id).exists():
@@ -107,4 +110,4 @@ def handler404(request, exception):
     """
     Handler for Bad Request 404.
     """
-    return render(request, "404.html", status=400)
+    return render(request, "404.html", status=404)

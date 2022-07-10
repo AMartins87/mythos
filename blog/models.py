@@ -15,6 +15,9 @@ class Post(models.Model):
     post_date = models.DateField(auto_now_add=True)
 
     def __str__(self):
+        """
+        Returns name of the story and username of the author
+        """
         return self.title + ' | ' + str(self.author)
 
     def get_absolute_url(self):
@@ -24,12 +27,14 @@ class Post(models.Model):
         return reverse('home')
 
     def total_likes(self):
-        """Counts likes"""
+        """
+        Counts amount of likes
+        """
         return self.likes.count()
 
 
 class Comment(models.Model):
-    """Comments model"""
+    """ Comments model """
     post = models.ForeignKey(Post, related_name="comments",
                              on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -37,7 +42,9 @@ class Comment(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        # return '%s - %s' % (self.post.title, self.name)
+        """
+        Return text of the model followed by username of the author
+        """
         return f"Comment {self.body} by {self.name}"
 
 
