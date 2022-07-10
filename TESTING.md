@@ -147,18 +147,17 @@ All of these opened respective social media sites in new windows as expected.
 
 ---
 
-
 All of these tests were performed on desktop PC, Dell laptop and iPhone8, iPhone 8, iPhone 12 and iPad Pro and worked as planned. The app was responsive and very easy to navigate.
 
-
-
 ### SUMMARY OF ALL TESTS 
+- Menu links tested
 - Login and registration
 - Added a post with and without an image
 - Edited and deleted a post as an author
 - Commented on a post
 - Used the like button
 - Filled in the contact form 
+- Tested all footer social media links
 
 ---
 

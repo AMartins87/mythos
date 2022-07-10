@@ -199,11 +199,13 @@ p.login, a.login {
 
 form.story p {
     width: 85vw;
+    font-family: monospace;
 }
 
 /* Update a story */
 
 .py-3.update form {
+    font-family: monospace;
     display: grid;
     width: 85vw;
 }
@@ -223,6 +225,10 @@ form.story p {
 
 /* Make a comment */
 
+#id_body {
+    width: 85vw;
+}
+
 .btn-dark {
     border-radius: 25px;
 }
@@ -234,6 +240,7 @@ p.comment, a.comment {
 /* Update a story */
 .py-3.contact p {
     display: grid;
+    font-family: monospace;
 }
 
 /* Delete a story */ 
@@ -267,7 +274,6 @@ input {
 
 .py-3 {
     position: relative;
-    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .py-3.contact p {

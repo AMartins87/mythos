@@ -24,6 +24,9 @@ class SignUpForm(UserCreationForm):
                   'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
+        """
+        Function to style user registering fields.
+        """
         super(SignUpForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs['class'] = 'form-control'
         self.fields['password1'].widget.attrs['class'] = 'form-control'
