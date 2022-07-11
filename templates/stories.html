@@ -3,21 +3,16 @@
 
 {% block content %}
 <!-- Story title -->
-<h3>
-        {{post.title}}
-</h3>
-
+<h3> {{post.title}} </h3>
 <br>
+
 <!-- Author's name -->
-<h6>
-        by {{post.author}}
-</h6>
+<h6> by {{post.author}} </h6>
 <!-- Date of posting -->
-<em>
-        {{post.post_date}}
-</em>
+<em> {{post.post_date}} </em>
 
 {% comment %} {% endcomment %}
+
 <!-- Return button for users to be able to return to home page -->
 <small><a class="return_home" href="{% url 'home' %}">Return</a></small><br />
 {% if user.is_authenticated %}{% if user.id == post.author.id %}
@@ -31,11 +26,13 @@
 {% endif %}
 {% endif %}
 {% comment %} {% endcomment %}
+
 <!-- Full story body -->
 <div class="story_body">
         <p>{{ post.body|safe }}</p>
 </div>
 <br>
+
 <!-- Image uploaded by a user -->
 <div class="image-container">
         {% if post.story_image.url is not none %}
@@ -43,7 +40,6 @@
 
         {% endif %}
 </div>
-
 <hr>
 <br>
 <!-- If user is logged in they can press the like button -->
@@ -51,15 +47,13 @@
 
 <form action="{% url 'like_post' post.pk %}" method="POST">
         {% csrf_token %}
-
         <button class="like" type="submit" , name="post_id" , value="{{post.id}}" ,
                 class="btn btn-success me-md-2 btn-sm">Like</button>
-
 </form>
 
 {% endif %}
 
-<b>{{total_likes}} likes</b>
+<b> {{total_likes}} likes </b>
 <br>
 
 <!-- Returns user back to the bottom of the story after they press like button -->

@@ -5,19 +5,20 @@
 {% block content %}
 
 <h1 class="my-4">Login</h1>
-
+<!-- Login form -->
 <div class="form-group">
     <form method="POST">
 
         {% csrf_token %}
 
         {{ form.as_p }}
-
+        <!-- Login button -->
         <div class="d-grid">
             <button class="btn btn-dark ">Login</button>
         </div>
     </form>
     <br>
+    <!-- Link to register -->
     <p class="login">Not registered? Please
         <a class="nav-link login" href="{% url 'register' %}">register
         </a> here.

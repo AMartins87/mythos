@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}
-Contact us
-{% endblock %}
+{% block title %} Contact us {% endblock %}
 
 {% block content %}
 
@@ -12,7 +10,7 @@ Contact us
     <p class="text-center">
         Let us know if you'd like to see some new features added to this site!
     </p>
-
+    <!-- Contact form -->
     <div class="form-group">
         <form method="POST">
 
@@ -23,7 +21,7 @@ Contact us
             {% comment %}
 
             {% endcomment %}
-             <!-- Send comment button -->
+            <!-- Send comment button -->
             <div class="d-grid">
                 <button class="btn btn-dark">Send</button>
             </div>
@@ -31,5 +29,4 @@ Contact us
     </div>
 
 </div>
-
 {% endblock %}
