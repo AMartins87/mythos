@@ -17,7 +17,7 @@
         {{post.post_date}}
 </em>
 
-{% comment %} added {% endcomment %}
+{% comment %} {% endcomment %}
 <!-- Return button for users to be able to return to home page -->
 <small><a class="return_home" href="{% url 'home' %}">Return</a></small><br />
 {% if user.is_authenticated %}{% if user.id == post.author.id %}
@@ -52,7 +52,8 @@
 <form action="{% url 'like_post' post.pk %}" method="POST">
         {% csrf_token %}
 
-        <button class="like" type="submit", name="post_id", value="{{post.id}}", class="btn btn-success me-md-2 btn-sm">Like</button>
+        <button class="like" type="submit" , name="post_id" , value="{{post.id}}" ,
+                class="btn btn-success me-md-2 btn-sm">Like</button>
 
 </form>
 
@@ -60,6 +61,19 @@
 
 <b>{{total_likes}} likes</b>
 <br>
+
+<!-- Returns users back to the bottom of the story after they press like button -->
+<script>
+        document.addEventListener("DOMContentLoaded",
+                function (event) {
+                        var scrollpos = localStorage.getItem('scrollpos');
+                        if (scrollpos) window.scrollTo(0, scrollpos);
+                });
+        window.onbeforeunload = function (e) {
+                localStorage.setItem('scrollpos', window.scrollY);
+        };
+</script>
+
 <!-- If user is logged in they can leave a comment -->
 <h2>Comments:</h2>
 
