@@ -33,6 +33,16 @@ User stories were labelled as **Must Have**, **Nice to have** and later I reated
 
 ![Kanban](media/images/kanban_project_issues.JPG)
 
+## **Future development**
+
+As listed on my Kanban board, I'd to implement few new features in a future. One of them being password and usernam reset function in case the site users forget these. 
+
+I would like for users to be able to amend their account details as well as be able to delete their account. 
+
+And lastly, I would also like to be able delete user comments if they would against published community guidelines.
+
+---
+
 # **FEATURES**
 ## **Main Page**
 - Navbar (on every page for ease of navigation)
