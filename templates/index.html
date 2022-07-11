@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %} Mythos {% endblock %}
+{% block title %} Welcome to Mythos {% endblock %}
 
 
 {% block content %}
 
 <!-- Home image and overlay box with welcome message and login/register button -->
 <div class="container-fluid hero-image mh-50" style="height:332px;
-     background-image:url('https://res.cloudinary.com/mythos/image/upload/v1656758722/background-image_j2nkcs.jpg');">
+     background-image:url('https://res.cloudinary.com/mythos/image/upload/v1657575586/hero_image_ml3308.webp');">
     <div class="hero-text">
         <h1 class="text-center page-title">Welcome to Mythos</h1>
 
@@ -38,7 +38,7 @@
                         {% if x.story_image.url is not none %}
                         <img src=" {{ x.story_image.url }}" alt=" {{ x.title }} story image" class="card-img-top">
                         {% else %}
-                        <img src="https://res.cloudinary.com/mythos/image/upload/v1657307673/placeholder.png"
+                        <img src="https://res.cloudinary.com/mythos/image/upload/v1657574993/placeholder.webp"
                             class="card-img-top" alt="Placeholder image if user did not upload an image">
                         {% endif %}
                     </div>

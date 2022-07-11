@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% comment %} added {% endcomment %}
+{% comment %} {% endcomment %}
 
 {% block title %} Update the post{% endblock %}
 
@@ -12,9 +12,9 @@
 
             {% csrf_token %}
 
-            {{ form.media }}
+            {{form.media}}
 
-            {{ form.as_table }}
+            {{form.as_table}}
 
             <!-- Update story button -->
             <div class="d-grid">

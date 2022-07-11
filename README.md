@@ -157,8 +157,8 @@ It was a very simple fix - I forgot to recreate a new *env.py* file.
 
 ## **Unfixed bugs**
 
-No known unfixed bugs.
-
+When running my page through Chrome Lighthouse tool, mobile site performance comes below score of 80 due to image sizes. As I have run out of time, I'd like to implement a check image sizer in a near future to fix this issue. In the meanwhile I have converted my hero image and placeholder image to webp and ran it through [tinyjpg](https://tinyjpg.com/) to improve on the performance. 
+    
 ---
 
 # **DEPLOYMENT**

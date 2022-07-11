@@ -178,18 +178,23 @@ All of these tests were performed on desktop PC, Dell laptop, and iPhone8, iPhon
     
   ### **Blog app**
   #### **admin.py**
+
   ![PEP8 admin.py](media/testing/validators/pep8_admin_blog.JPG)
 
   #### **forms.py**
+
   ![PEP8 forms.py](media/testing/validators/pep8_forms_blog.JPG)
 
   #### **models.py**
+
   ![PEP8 models.py](media/testing/validators/pep8_models_blog.JPG)
 
   #### **urls.py**
+
   ![PEP8 urls.py](media/testing/validators/pep8_urls_blog.JPG)
 
   #### **views.py**
+
   ![PEP8 views.py](media/testing/validators/pep8_views_blog.JPG)
 
 # Accessibility
@@ -209,6 +214,7 @@ I checked that the chosen colors and fonts are easy to read. All pages have pass
   ![Lighthouse_desktop](media/testing/validators/lighthouse_desktop_mp.JPG)
 
   ### **Mobile**
+
   ![Lighthouse_mobile](media/testing/validators/lighthouse_mobile_mp.JPG)
 
 

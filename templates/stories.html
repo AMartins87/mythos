@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} {{post.title_tag}} {% endblock %}
+{% block title %} {{post.title}} {% endblock %}
 
 {% block content %}
 <!-- Story title -->
@@ -62,7 +62,7 @@
 <b>{{total_likes}} likes</b>
 <br>
 
-<!-- Returns users back to the bottom of the story after they press like button -->
+<!-- Returns user back to the bottom of the story after they press like button -->
 <script>
         document.addEventListener("DOMContentLoaded",
                 function (event) {
