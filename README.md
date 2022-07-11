@@ -1,7 +1,7 @@
 
 # **INTRODUCTION**
 
-Mythos is full-stack framework project built using Django, Python, HTML and CSS. It's a blog-style website where users can read about local myths and legends from all over the world. The objective is for users to be allowed to post, like and comment on blog posts.
+Mythos is a full-stack framework project built using Django, Python, HTML, and CSS. It's a blog-style website where users can read about local myths and legends from all over the world. The objective is for users to be allowed to post, like, and comment on blog posts.
 
 Live project can be found [here](https://mythoi.herokuapp.com/).
 
@@ -13,13 +13,13 @@ Live project can be found [here](https://mythoi.herokuapp.com/).
 # **USER EXPERIENCE**
 ## **USER STORIES**
 
-As a site user and site admin I want to be able to login/logout of my account so I can interact with the site’s posts and users
+As a site user and site admin, I want to be able to login/logout of my account so I can interact with the site’s posts and users.
 
 ## **External user’s goal:**
 ## *As a site user:*
-- I can click on a post so I can read it in full.
-- I want to be able to write my own posts and comment on other stories so I can exchange opinions and ideas with other users and the blog owner. This attracts more traffic and makes the site social.
-- I want to be able to like posts so I can show the users and site admin I have liked their content.
+- I can click on a post so I can read it in full
+- I want to be able to write my own posts and comment on other stories so I can exchange opinions and ideas with other users and the blog owner. This attracts more traffic and makes the site social
+- I want to be able to like posts so I can show the users and site admin I have liked their content
 
 ## **Site owner's goal:**
 ## *As a site admin:*
@@ -29,17 +29,17 @@ As a site user and site admin I want to be able to login/logout of my account so
 # **Agile planning**
 The development of this project was managed and implemented using GitHub project Kanban board and can be located [**here**](https://github.com/AMartins87/mythos/projects/1).
 
-User stories were labelled as **Must Have**, **Nice to have** and later I reated **future development** label. Documentation like README and TESTING md files were assigned **documentation** label.
+User stories were labeled as **Must Have**, **Nice to have**, and later I created **future development** label. Documentation like README and TESTING md files were assigned **documentation** label.
 
 ![Kanban](media/images/kanban_project_issues.JPG)
 
 ## **Future development**
 
-As listed on my Kanban board, I'd to implement few new features in a future. One of them being password and usernam reset function in case the site users forget these. 
+As listed on my Kanban board, I'd to implement a few new features in the future. One of them is the password and username reset function in case the site users forget these.
 
-I would like for users to be able to amend their account details as well as be able to delete their account. 
+I would like for users to be able to amend their account details as well as be able to delete their accounts.
 
-And lastly, I would also like to be able delete user comments if they would against published community guidelines.
+And lastly, I would also like to be able to delete user comments if they would against published community guidelines.
 
 ---
 
@@ -63,7 +63,7 @@ And lastly, I would also like to be able delete user comments if they would agai
 
 ![Navbar image](media/images/admin_login_page_view.JPG)
 
-**Navbar with collapsible menu icon for screens with width of 991px or less**
+**Navbar with collapsible menu icon for screens with a width of 991px or less**
 
 ![Mobile navbar image](media/images/navbar_small_screens.JPG)
     
@@ -75,7 +75,7 @@ And lastly, I would also like to be able delete user comments if they would agai
 
 ## Latest stories
 
-**Latest stories** section where are all stories' previews with uploaded image and they show up in a list order, in descending order from the latest uploaded posts to the oldest ones, with  ***Read full story*** click through link which will take the user to the full story
+**Latest stories** section where are all stories' previews with uploaded images and they show up in list order, in descending order from the latest uploaded posts to the oldest ones, with  ***Read full story*** click-through link which will take the user to the full story
 
 ![Latest stories](media/images/latest_stories_section.JPG)
 
@@ -83,7 +83,7 @@ If users don't upload their own images, an image will feed through from Cloudina
 
 ![Latest stories with placeholder image](media/images/latest_stories_section_no_image.JPG)
 
-Page with the full view of the story as an user
+Page with the full view of the story as a user
 
 ![Full story](media/images/story_page_user_view.JPG)
 
@@ -93,9 +93,9 @@ Page with the full view of the story as an author which shows *edit* and *delete
 
 ## **Add story page**
 
-If users are not logged in it will redirect them to login page before they can add a story.
+If users are not logged in it will redirect them to the login page before they can add a story.
 
-Otherwise users are taken to the correct page immediately. They must fill in **title**, add **story** text and can choose to upload an image if they wish so. This image is then saved to my Cloudinary database
+Otherwise, users are taken to the correct page immediately. They must fill in **title**, add **story** text, and can choose to upload an image if they wish so. This image is then saved to my Cloudinary database
 
 ![Add story page](media/images//add_story_page.JPG)
 
@@ -111,14 +111,14 @@ Once logged in, the page requires only a comment input
 
 ## **Delete post page**
 
-Users are shown title of the story to be deleted and asked if they are sure to delete and two buttons are shown - *Delete* abd *Go back* which will take the user back to home page
+Users are shown the title of the story to be deleted and asked if they are sure to delete and two buttons are shown - *Delete* and *Go back* which will take the user back to the home page
 
 ![Delete post page](media/images/delete_post_page.JPG)
 
 
 ## **Contact page**
 
-Users can contact the site administrator by filling in simple form on screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
+Users can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
 
 ![Contact page](media/images/contact_page.JPG)
 
@@ -143,11 +143,11 @@ See all testing documentation **[here](/TESTING.md)**.
 
 1. When I returned after my study break I had to reinstall all the Django libraries and packages which I have all successfully installed. I had to contact Tutor Support as I wasn't sure where the issue was. 
 It was a very simple fix - I forgot to recreate a new *env.py* file. 
-2. When trying to open up the browser with command *python3 manage.py runserver*, there was an error coming up. As I haven't made any changes since I worked on the project the previous night and all worked then, I decided to contact **Tutor Support** as the error was completely unknown to me. Again this was an easy fix, as Heroku has run updates and I had to only copy over a new **DATABASE_URL** into my *env.py* file.
+2. When trying to open up the browser with the command *python3 manage.py runserver*, there was an error coming up. As I haven't made any changes since I worked on the project the previous night and all worked then, I decided to contact **Tutor Support** as the error was completely unknown to me. Again this was an easy fix, as Heroku has run updates and I had to only copy over a new **DATABASE_URL** into my *env.py* file.
 
     ![Bug image 1](media/images/bug_4jul.JPG)
 
-3. After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error messages and my page has crashed as well. 
+3. After creating a model for adding posts and installing ckeditor, I tried to migrate but it was coming up with an error message and my page has crashed as well. 
     - I reverted all migrations I made till this point, using a command *./manage.py migrate blog zero*, then I proceeded with *python manage.py makemigrations > python manage.py migrate* and all was ok then.
 
         ![Bug image 2](media/images/browser_error.png)
@@ -162,33 +162,33 @@ No known unfixed bugs.
 ---
 
 # **DEPLOYMENT**
-This project was created in GitHub and deployed to Heroku. 
+This project was created on GitHub and deployed to Heroku.
 
-## **Following steps were taken in deployment of this project:**
+## **Following steps were taken in the deployment of this project:**
 
-1.  Using the CI full template, new repository was created and named Mythos
-2.  When in the new repository, following Django packages and supporting libraries were installed by using the command ***pip3 install*** : **Gunicorn, Psycopg, Cloudinary**.
+1.  Using the CI full template, a new repository was created and named Mythos
+2.  When in the new repository, the following Django packages and supporting libraries were installed by using the command ***pip3 install***: **Gunicorn, Psycopg, Cloudinary**.
 3.  *Requirements.txt* file was created and updated
-4.  Project and app were created, app was added to my ***settings.py*** file into INSTALLED_APPS section
+4.  Project and app were created, the app was added to my ***settings.py*** file in INSTALLED_APPS section
 5.  First migration and testing of the server
-6.  After the first migration, new app was created in Heroku, add-on of Postgres database was added to app resources
-7.  Database attachment in GitPod by creating ***env.py*** and adding Postgres database link, SECRET_KEY and my Cloudinary link
-8.  Entered Secret Key, Cloudinary and Postgres database to Config Vars in Heroku
-9.  Created templates, media and static files on top level of the directory
+6.  After the first migration, a new app was created in Heroku, add-on of Postgres database was added to app resources
+7.  Database attachment in GitPod by creating ***env.py*** and adding Postgres database link, SECRET_KEY, and my Cloudinary link
+8.  Entered Secret Key, Cloudinary, and Postgres database to Config Vars in Heroku
+9.  Created templates, media, and static files on the top level of the directory
 10.  Created **Procfile** and added my gunicorn code
-11.  All changes added with add, commit and push commands in Github
-12. Deployed content manually through Heroku by going to *Deploy* tab, connected my **GitHub** account and found my repository and connected it with **Heroku**
-13. Pressed *Enable Automatic Deploys* and then pressed *Deploy Branch* button. Once this finished, I opened my app to check all works
+11.  All changes added with add, commit, and push commands in Github
+12. Deployed content manually through Heroku by going to *Deploy* tab, connected my **GitHub** account and found my repository, and connected it with **Heroku**
+13. Pressed *Enable Automatic Deploys* and then pressed *Deploy Branch* button. Once this was finished, I opened my app to check all works
 
 --- 
 
 # **CREDITS**
 ## **MEDIA**
 
-**Hero image** on home page was created by me in [Canva](canva.com)
-**Placeholder image** which is used as a placeholder image when users don't upload their own was create by me in [Canva](canva.com)
+**Hero image** on the home page was created by me in [Canva](canva.com)
+**Placeholder image** which is used as a placeholder image when users don't upload their own was created by me in [Canva](canva.com)
 
-**README main image** was screenshoted from [Am I Responsive](https://ui.dev/amiresponsive?url=https://mythoi.herokuapp.com/)
+**README main image** was screenshotted from [Am I Responsive](https://ui.dev/amiresponsive?url=https://mythoi.herokuapp.com/)
 
 [Cicada story image](https://www.dailyartmagazine.com/hero-mythical-creatures-spiders-in-art/) - Tsuchigumo emaki, second-generation copy of the handscroll painting from Tosa Nagataka School
 
@@ -203,19 +203,19 @@ This project was created in GitHub and deployed to Heroku.
 
 ### **[Tutor Support](https://learn.codeinstitute.net/ci_support/diplomainsoftwaredevelopmentecommerce/tutor)**
 - For helping with restarting my project and helping me found the core of the issue
-- For guiding on how to fix a bug when my project didn't want to open up
+- For guiding me on how to fix a bug when my project didn't want to open up
 
 ### **[Django documentation](https://docs.djangoproject.com/en/4.0/)**
 - I relied heavily on this page during the development of my project
 
 ### **[Stack Overflow](https://stackoverflow.com/)**
-- I searched for quite few styling issues I was facing when trying to adjust the standard Bootstrap shell look. I have always found an answer/solution on there when I couldn't find solution on Bootstrap site
+- I searched for quite a few styling issues I was facing when trying to adjust the standard Bootstrap shell look. I have always found an answer/solution on there when I couldn't find a solution on the Bootstrap site
 
 ### **[Bootstrap](https://getbootstrap.com/docs/5.0)**
 - Thank you for providing the basic styling for my project
 
 ### **[Geeks for Geeks](https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/)**
-- This helped me to simplify all forms used on my project
+- This helped me to simplify all forms used in my project
 
 ### **[W3Schools](https://www.w3schools.com/)**
 - Thank you for helping me with implementing an image text block on my home page
