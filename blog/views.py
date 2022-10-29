@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic import (ListView, DetailView,
                                   CreateView, DeleteView, UpdateView)
 from django.urls import reverse_lazy, reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Contact
 from .forms import PostForm, CommentForm, ContactForm
@@ -37,7 +38,7 @@ class StoryView(DetailView):
         return context
 
 
-class AddPostView(CreateView):
+class AddPostView(LoginRequiredMixin, CreateView):
     """
     Adding a new story view
     """
@@ -46,7 +47,7 @@ class AddPostView(CreateView):
     template_name = 'add_post.html'
 
 
-class UpdatePostView(UpdateView):
+class UpdatePostView(LoginRequiredMixin, UpdateView):
     """
     Updating a story view
     """
@@ -55,7 +56,7 @@ class UpdatePostView(UpdateView):
     fields = ('title', 'body')
 
 
-class DeletePostView(DeleteView):
+class DeletePostView(LoginRequiredMixin, DeleteView):
     """
     View that displays delete to authors when they want to delete their post
     """
