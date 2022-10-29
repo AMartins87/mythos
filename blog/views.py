@@ -3,6 +3,7 @@ from django.views.generic import (ListView, DetailView,
                                   CreateView, DeleteView, UpdateView)
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Contact
 from .forms import PostForm, CommentForm, ContactForm
@@ -54,6 +55,18 @@ class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
     fields = ('title', 'body')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super(UpdatePostView, self).form_valid(form)
+
+    def dispatch(self, request, *args, **kwargs):
+        handler = super().dispatch(request, *args, **kwargs)
+        user = request.user
+        post = self.get_object()
+        if not (post.author == user):
+            raise PermissionDenied
+        return handler
 
 
 class DeletePostView(LoginRequiredMixin, DeleteView):
