@@ -4,24 +4,27 @@
 {% block title %} Update the post{% endblock %}
 
 {% block content %}
+{% if request.user.id == post.author.id %}
+    <h2 class="py-3">Update the post</h2>
+    <div class="py-3 update">
+        <div class="form-group">
+            <form method="POST">
 
-<h2 class="py-3">Update the post</h2>
-<div class="py-3 update">
-    <div class="form-group">
-        <form method="POST">
+                {% csrf_token %}
 
-            {% csrf_token %}
+                {{form.media}}
 
-            {{form.media}}
+                {{form.as_table}}
 
-            {{form.as_table}}
-
-            <!-- Update story button -->
-            <div class="d-grid">
-                <button class="btn btn-dark">Update</button>
-            </div>
-        </form>
+                <!-- Update story button -->
+                <div class="d-grid">
+                    <button class="btn btn-dark">Update</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-</div>
+{% else %}
+    <h2>You are not the author of this post. So you are not allowed to update it.</h2>
+    <br><br>
+{% endif %}
 {% endblock %}

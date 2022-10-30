@@ -56,17 +56,17 @@ class UpdatePostView(LoginRequiredMixin, UpdateView):
     template_name = 'update_post.html'
     fields = ('title', 'body')
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super(UpdatePostView, self).form_valid(form)
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super(UpdatePostView, self).form_valid(form)
 
-    def dispatch(self, request, *args, **kwargs):
-        handler = super().dispatch(request, *args, **kwargs)
-        user = request.user
-        post = self.get_object()
-        if not (post.author == user):
-            raise PermissionDenied
-        return handler
+    # def dispatch(self, request, *args, **kwargs):
+    #     handler = super().dispatch(request, *args, **kwargs)
+    #     user = request.user
+    #     post = self.get_object()
+    #     if not (post.author == user):
+    #         raise PermissionDenied
+    #     return handler
 
 
 class DeletePostView(LoginRequiredMixin, DeleteView):

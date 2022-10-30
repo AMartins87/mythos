@@ -4,21 +4,26 @@
 {% block title %} {% endblock %}
 
 {% block content %}
-<!-- Delete heading with story title to be deleted -->
-<h4 class="my-4" style="font-style: italic;">Delete: {{post.title}}</h4>
-<div class="form-group">
-    <form method="POST">
+{% if request.user.id == post.author.id %}
+    <!-- Delete heading with story title to be deleted -->
+    <h4 class="my-4" style="font-style: italic;">Delete: {{post.title}}</h4>
+    <div class="form-group">
+        <form method="POST">
 
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <strong>Are you sure?</strong><br>
-        <!-- Delete button -->
-        <button class="btn btn-danger ">Delete</button>
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <strong>Are you sure?</strong><br>
+            <!-- Delete button -->
+            <button class="btn btn-danger ">Delete</button>
 
-    </form>
-    <!-- Return button which will take user to home page -->
-    <a href="{% url 'home' %}">
-        <button class="btn btn-dark ">Go back</button></a>
-</div>
+        </form>
+        <!-- Return button which will take user to home page -->
+        <a href="{% url 'home' %}">
+            <button class="btn btn-dark ">Go back</button></a>
+    </div>
+{% else %}
+    <h2>You are not the author of this post. So you are not allowed to delete it.</h2>
+    <br><br>
+{% endif %}
 {% endblock %}
