@@ -25,6 +25,8 @@
     </div>
 {% else %}
     <h2>You are not the author of this post. So you are not allowed to update it.</h2>
-    <br><br>
+    <hr><br>
+    <a href="{% url 'home' %}">
+        <button class="btn btn-dark">Home</button></a>
 {% endif %}
 {% endblock %}

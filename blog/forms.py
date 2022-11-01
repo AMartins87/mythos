@@ -3,7 +3,9 @@ from .models import Post, Comment, Contact
 
 
 class PostForm(forms.ModelForm):
-    """Comment form"""
+    """
+    Comment form
+    """
     class Meta:
         """
         Class that uses bootstrap classes to style fields and
@@ -28,7 +30,9 @@ class PostForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
-    """Form for commenting """
+    """
+    Form for commenting
+    """
     class Meta:
         """
         Class that uses bootstrap classes to style fields and

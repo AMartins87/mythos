@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block content %}
+<!-- 404 page header and text-->
 <div class="d-flex flex-column align-items-center">
     <h1>404 Page Not Found</h1>
     <br>
     <p>We can't seem to find the page you're looking for.</p>
     <p>If you typed in the web address, please check it is correct and try again.</p>
-
+     <!-- Home page button -->
     <a href="{% url 'home' %}" class="btn btn-dark">Home</a>
 </div>
 {% endblock %}

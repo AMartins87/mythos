@@ -34,7 +34,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    """ Comments model """
+    """
+    Comments model
+    """
     post = models.ForeignKey(Post, related_name="comments",
                              on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -49,7 +51,9 @@ class Comment(models.Model):
 
 
 class Contact(models.Model):
-    """Contact model"""
+    """
+    Contact model
+    """
     name = models.CharField(max_length=50, default="")
     email = models.EmailField()
     subject = models.CharField(max_length=50)
